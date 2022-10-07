@@ -1,0 +1,19 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  buf-push:
+    runs-on: ubuntu-latest
+    name: Push to BSR
+    environment: production
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bufbuild/buf-setup-action@v1
+      - uses: bufbuild/buf-push-action@v1
+        with:
+          buf_token: ${{ secrets.BUF_TOKEN }}
+          input: proto

@@ -1,0 +1,19 @@
+[package]
+name = "vasystem-api-grpc"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+homepage = "https://docs.vasystem.dev/"
+documentation = "https://docs.vasystem.dev/"
+description = "VASystem API gRPC"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+prost = "0.11"
+prost-types = "0.11"
+tonic = { version = "0.8", features = ["tls", "tls-roots"] }
+
+[build-dependencies]
+prost-build = "0.11"
+tonic-build = "0.8"

@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+    paths:
+      - .github/workflows/publish.yaml
+      - grpc/**
+      - proto/**
 
 jobs:
   buf-push:
@@ -17,3 +21,23 @@ jobs:
         with:
           buf_token: ${{ secrets.BUF_TOKEN }}
           input: proto
+  cargo-publish:
+    runs-on: ubuntu-latest
+    name: Publish to crates.io
+    environment: production
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+      - uses: actions-rs/install@v0.1
+        with:
+          crate: cargo-edit
+          version: latest
+      - name: Set version
+        run: cargo set-version 0.1.${{ github.run_number }}
+        working-directory: grpc/rust
+      - name: Publish to crates.io
+        run: cargo publish --token ${{ secrets.CRATES_REGISTRY_TOKEN }} --allow-dirty
+        working-directory: grpc/rust

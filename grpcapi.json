@@ -878,7 +878,7 @@
       "services": []
     },
     {
-      "name": "vasystem/api/v2/virtual_airline.proto",
+      "name": "vasystem/api/v2/virtual_airlines.proto",
       "description": "",
       "package": "vasystem.api.v2",
       "hasEnums": false,

@@ -6,7 +6,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.49.1)",
-    comments = "Source: vasystem/api/v2/virtual_airline.proto")
+    comments = "Source: vasystem/api/v2/virtual_airlines.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class VirtualAirlinesServiceGrpc {
 
@@ -243,7 +243,7 @@ public final class VirtualAirlinesServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return dev.vasystem.api.v2.VirtualAirlineProto.getDescriptor();
+      return dev.vasystem.api.v2.VirtualAirlinesProto.getDescriptor();
     }
 
     @java.lang.Override

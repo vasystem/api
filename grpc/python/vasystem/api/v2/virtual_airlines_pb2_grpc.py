@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from vasystem.api.v2 import virtual_airline_pb2 as vasystem_dot_api_dot_v2_dot_virtual__airline__pb2
+from vasystem.api.v2 import virtual_airlines_pb2 as vasystem_dot_api_dot_v2_dot_virtual__airlines__pb2
 
 
 class VirtualAirlinesServiceStub(object):
@@ -16,8 +16,8 @@ class VirtualAirlinesServiceStub(object):
         """
         self.GetVirtualAirline = channel.unary_unary(
                 '/vasystem.api.v2.VirtualAirlinesService/GetVirtualAirline',
-                request_serializer=vasystem_dot_api_dot_v2_dot_virtual__airline__pb2.GetVirtualAirlineRequest.SerializeToString,
-                response_deserializer=vasystem_dot_api_dot_v2_dot_virtual__airline__pb2.GetVirtualAirlineResponse.FromString,
+                request_serializer=vasystem_dot_api_dot_v2_dot_virtual__airlines__pb2.GetVirtualAirlineRequest.SerializeToString,
+                response_deserializer=vasystem_dot_api_dot_v2_dot_virtual__airlines__pb2.GetVirtualAirlineResponse.FromString,
                 )
 
 
@@ -37,8 +37,8 @@ def add_VirtualAirlinesServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'GetVirtualAirline': grpc.unary_unary_rpc_method_handler(
                     servicer.GetVirtualAirline,
-                    request_deserializer=vasystem_dot_api_dot_v2_dot_virtual__airline__pb2.GetVirtualAirlineRequest.FromString,
-                    response_serializer=vasystem_dot_api_dot_v2_dot_virtual__airline__pb2.GetVirtualAirlineResponse.SerializeToString,
+                    request_deserializer=vasystem_dot_api_dot_v2_dot_virtual__airlines__pb2.GetVirtualAirlineRequest.FromString,
+                    response_serializer=vasystem_dot_api_dot_v2_dot_virtual__airlines__pb2.GetVirtualAirlineResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -62,7 +62,7 @@ class VirtualAirlinesService(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/vasystem.api.v2.VirtualAirlinesService/GetVirtualAirline',
-            vasystem_dot_api_dot_v2_dot_virtual__airline__pb2.GetVirtualAirlineRequest.SerializeToString,
-            vasystem_dot_api_dot_v2_dot_virtual__airline__pb2.GetVirtualAirlineResponse.FromString,
+            vasystem_dot_api_dot_v2_dot_virtual__airlines__pb2.GetVirtualAirlineRequest.SerializeToString,
+            vasystem_dot_api_dot_v2_dot_virtual__airlines__pb2.GetVirtualAirlineResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

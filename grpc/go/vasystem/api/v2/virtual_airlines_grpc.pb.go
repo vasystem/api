@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             (unknown)
-// source: vasystem/api/v2/virtual_airline.proto
+// source: vasystem/api/v2/virtual_airlines.proto
 
 package apiv2
 
@@ -106,5 +106,5 @@ var VirtualAirlinesService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "vasystem/api/v2/virtual_airline.proto",
+	Metadata: "vasystem/api/v2/virtual_airlines.proto",
 }

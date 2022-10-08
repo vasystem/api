@@ -935,7 +935,7 @@
           "fields": [
             {
               "name": "name",
-              "description": "",
+              "description": "The name of the virtual airline.",
               "label": "",
               "type": "string",
               "longType": "string",

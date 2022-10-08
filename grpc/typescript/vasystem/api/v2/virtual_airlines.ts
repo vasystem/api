@@ -33,6 +33,8 @@ export interface GetVirtualAirlineResponse {
  */
 export interface VirtualAirline {
     /**
+     * The name of the virtual airline.
+     *
      * @generated from protobuf field: string name = 1;
      */
     name: string;

@@ -110,6 +110,7 @@ type VirtualAirline struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The name of the virtual airline.
 	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 	Url  string `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
 }

@@ -15,6 +15,7 @@ message GetVirtualAirlineResponse {
 }
 
 message VirtualAirline {
+  // The name of the virtual airline.
   string name = 1;
   string url = 2;
 }

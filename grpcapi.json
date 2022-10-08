@@ -522,7 +522,7 @@
                   },
                   {
                     "name": "uint64.gte",
-                    "value": 1
+                    "value": 0
                   }
                 ]
               }

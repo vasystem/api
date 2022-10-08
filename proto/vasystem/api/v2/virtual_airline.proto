@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package vasystem.api.v2;
+
+service VirtualAirlinesService {
+  // Get virtual airline information
+  // This method does not require authentication.
+  rpc GetVirtualAirline(GetVirtualAirlineRequest) returns (GetVirtualAirlineResponse) {}
+}
+
+message GetVirtualAirlineRequest {}
+
+message GetVirtualAirlineResponse {
+  VirtualAirline virtual_airline = 1;
+}
+
+message VirtualAirline {
+  string name = 1;
+  string url = 2;
+}

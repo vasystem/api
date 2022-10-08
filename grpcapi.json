@@ -876,6 +876,122 @@
         }
       ],
       "services": []
+    },
+    {
+      "name": "vasystem/api/v2/virtual_airline.proto",
+      "description": "",
+      "package": "vasystem.api.v2",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": true,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "GetVirtualAirlineRequest",
+          "longName": "GetVirtualAirlineRequest",
+          "fullName": "vasystem.api.v2.GetVirtualAirlineRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": false,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": []
+        },
+        {
+          "name": "GetVirtualAirlineResponse",
+          "longName": "GetVirtualAirlineResponse",
+          "fullName": "vasystem.api.v2.GetVirtualAirlineResponse",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "virtual_airline",
+              "description": "",
+              "label": "",
+              "type": "VirtualAirline",
+              "longType": "VirtualAirline",
+              "fullType": "vasystem.api.v2.VirtualAirline",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "VirtualAirline",
+          "longName": "VirtualAirline",
+          "fullName": "vasystem.api.v2.VirtualAirline",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "hasOneofs": false,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            },
+            {
+              "name": "url",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "isoneof": false,
+              "oneofdecl": "",
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "VirtualAirlinesService",
+          "longName": "VirtualAirlinesService",
+          "fullName": "vasystem.api.v2.VirtualAirlinesService",
+          "description": "",
+          "methods": [
+            {
+              "name": "GetVirtualAirline",
+              "description": "Get virtual airline information\nThis method does not require authentication.",
+              "requestType": "GetVirtualAirlineRequest",
+              "requestLongType": "GetVirtualAirlineRequest",
+              "requestFullType": "vasystem.api.v2.GetVirtualAirlineRequest",
+              "requestStreaming": false,
+              "responseType": "GetVirtualAirlineResponse",
+              "responseLongType": "GetVirtualAirlineResponse",
+              "responseFullType": "vasystem.api.v2.GetVirtualAirlineResponse",
+              "responseStreaming": false,
+              "options": {
+                "google.api.http": {
+                  "rules": [
+                    {
+                      "method": "GET",
+                      "pattern": "/v2/virtual-airline"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "scalarValueTypes": [

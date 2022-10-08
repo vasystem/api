@@ -57,6 +57,7 @@ public interface RouteOrBuilder extends
   /**
    * <pre>
    * This does not include the airline code.
+   * Example: `1234`
    * </pre>
    *
    * <code>string icao_flight_number = 3 [json_name = "icaoFlightNumber"];</code>
@@ -66,6 +67,7 @@ public interface RouteOrBuilder extends
   /**
    * <pre>
    * This does not include the airline code.
+   * Example: `1234`
    * </pre>
    *
    * <code>string icao_flight_number = 3 [json_name = "icaoFlightNumber"];</code>
@@ -130,7 +132,7 @@ public interface RouteOrBuilder extends
 
   /**
    * <pre>
-   * Departure time is in UTC.
+   * The departure time is in UTC.
    * </pre>
    *
    * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -139,7 +141,7 @@ public interface RouteOrBuilder extends
   boolean hasDepartureTime();
   /**
    * <pre>
-   * Departure time is in UTC.
+   * The departure time is in UTC.
    * </pre>
    *
    * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -148,7 +150,7 @@ public interface RouteOrBuilder extends
   dev.vasystem.api.v2.TimeOfDay getDepartureTime();
   /**
    * <pre>
-   * Departure time is in UTC.
+   * The departure time is in UTC.
    * </pre>
    *
    * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -157,7 +159,7 @@ public interface RouteOrBuilder extends
 
   /**
    * <pre>
-   * Arrival time is in UTC.
+   * The arrival time is in UTC.
    * </pre>
    *
    * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -166,7 +168,7 @@ public interface RouteOrBuilder extends
   boolean hasArrivalTime();
   /**
    * <pre>
-   * Arrival time is in UTC.
+   * The arrival time is in UTC.
    * </pre>
    *
    * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -175,7 +177,7 @@ public interface RouteOrBuilder extends
   dev.vasystem.api.v2.TimeOfDay getArrivalTime();
   /**
    * <pre>
-   * Arrival time is in UTC.
+   * The arrival time is in UTC.
    * </pre>
    *
    * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -184,8 +186,8 @@ public interface RouteOrBuilder extends
 
   /**
    * <pre>
-   * The duration of this flight. Can also be calculated from the departure
-   * and arrival times.
+   * The duration of this flight. This field is purely provided for convenience and can also
+   * be calculated from the departure and arrival times.
    * </pre>
    *
    * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -194,8 +196,8 @@ public interface RouteOrBuilder extends
   boolean hasDuration();
   /**
    * <pre>
-   * The duration of this flight. Can also be calculated from the departure
-   * and arrival times.
+   * The duration of this flight. This field is purely provided for convenience and can also
+   * be calculated from the departure and arrival times.
    * </pre>
    *
    * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -204,8 +206,8 @@ public interface RouteOrBuilder extends
   com.google.protobuf.Duration getDuration();
   /**
    * <pre>
-   * The duration of this flight. Can also be calculated from the departure
-   * and arrival times.
+   * The duration of this flight. This field is purely provided for convenience and can also
+   * be calculated from the departure and arrival times.
    * </pre>
    *
    * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -307,7 +309,7 @@ public interface RouteOrBuilder extends
 
   /**
    * <pre>
-   * Whether this route is archived.
+   * Whether this route is archived. An archived route cannot be booked by pilots.
    * </pre>
    *
    * <code>bool archived = 16 [json_name = "archived"];</code>

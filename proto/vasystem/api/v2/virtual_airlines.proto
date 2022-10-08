@@ -2,20 +2,30 @@ syntax = "proto3";
 
 package vasystem.api.v2;
 
+// Retrieve virtual airline information.
 service VirtualAirlinesService {
   // Get virtual airline information
   // This method does not require authentication.
   rpc GetVirtualAirline(GetVirtualAirlineRequest) returns (GetVirtualAirlineResponse) {}
 }
 
+// The GetVirtualAirlineRequest message contains the request parameters for the
+// GetVirtualAirline method.
 message GetVirtualAirlineRequest {}
 
+// The GetVirtualAirlineResponse message contains the response parameters for the
+// GetVirtualAirline method.
 message GetVirtualAirlineResponse {
   VirtualAirline virtual_airline = 1;
 }
 
+// A VirtualAirline resource represents a virtual airline. All methods in the API
+// operate on a single virtual airline.
 message VirtualAirline {
   // The name of the virtual airline.
+  // Example: `Star Alliance Virtual`
   string name = 1;
+  // The main website URL of the virtual airline.
+  // Example: `https://staralliancevirtual.org`
   string url = 2;
 }

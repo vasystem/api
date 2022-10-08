@@ -49,6 +49,10 @@ namespace Vasystem.Api.V2 {
 
   }
   #region Messages
+  /// <summary>
+  /// The GetVirtualAirlineRequest message contains the request parameters for the
+  /// GetVirtualAirline method.
+  /// </summary>
   public sealed partial class GetVirtualAirlineRequest : pb::IMessage<GetVirtualAirlineRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -201,6 +205,10 @@ namespace Vasystem.Api.V2 {
 
   }
 
+  /// <summary>
+  /// The GetVirtualAirlineResponse message contains the response parameters for the
+  /// GetVirtualAirline method.
+  /// </summary>
   public sealed partial class GetVirtualAirlineResponse : pb::IMessage<GetVirtualAirlineResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -399,6 +407,10 @@ namespace Vasystem.Api.V2 {
 
   }
 
+  /// <summary>
+  /// A VirtualAirline resource represents a virtual airline. All methods in the API
+  /// operate on a single virtual airline.
+  /// </summary>
   public sealed partial class VirtualAirline : pb::IMessage<VirtualAirline>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -449,6 +461,7 @@ namespace Vasystem.Api.V2 {
     private string name_ = "";
     /// <summary>
     /// The name of the virtual airline.
+    /// Example: `Star Alliance Virtual`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -462,6 +475,10 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "url" field.</summary>
     public const int UrlFieldNumber = 2;
     private string url_ = "";
+    /// <summary>
+    /// The main website URL of the virtual airline.
+    /// Example: `https://staralliancevirtual.org`
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Url {

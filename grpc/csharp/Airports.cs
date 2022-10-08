@@ -42,6 +42,9 @@ namespace Vasystem.Api.V2 {
 
   }
   #region Messages
+  /// <summary>
+  /// An Airport resource represents an airport.
+  /// </summary>
   public sealed partial class Airport : pb::IMessage<Airport>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -91,6 +94,9 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
+    /// <summary>
+    /// The unique identifier of the airport.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
@@ -103,6 +109,9 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "icao_code" field.</summary>
     public const int IcaoCodeFieldNumber = 2;
     private string icaoCode_ = "";
+    /// <summary>
+    /// The ICAO airport identifier. Unique.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string IcaoCode {
@@ -115,6 +124,9 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "iata_code" field.</summary>
     public const int IataCodeFieldNumber = 3;
     private string iataCode_ = "";
+    /// <summary>
+    /// The IATA airport identifier. This field is not unique.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string IataCode {

@@ -4,6 +4,10 @@
 package dev.vasystem.api.v2;
 
 /**
+ * <pre>
+ * An Airline resource represents an airline.
+ * </pre>
+ *
  * Protobuf type {@code vasystem.api.v2.Airline}
  */
 public final class Airline extends
@@ -52,6 +56,10 @@ private static final long serialVersionUID = 0L;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
+   * <pre>
+   * Unique identifier for the airline.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
@@ -69,6 +77,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Unique identifier for the airline.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -91,7 +103,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object icaoCode_;
   /**
    * <pre>
-   * The ICAO code is the unique identifier of the airline.
+   * The ICAO airline code. Unique.
+   * Example: `UAL`
    * </pre>
    *
    * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -112,7 +125,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The ICAO code is the unique identifier of the airline.
+   * The ICAO airline code. Unique.
+   * Example: `UAL`
    * </pre>
    *
    * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -136,6 +150,11 @@ private static final long serialVersionUID = 0L;
   public static final int IATA_CODE_FIELD_NUMBER = 3;
   private volatile java.lang.Object iataCode_;
   /**
+   * <pre>
+   * The IATA airline code. This field is not unique.
+   * Example: `UA`
+   * </pre>
+   *
    * <code>string iata_code = 3 [json_name = "iataCode"];</code>
    * @return The iataCode.
    */
@@ -153,6 +172,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The IATA airline code. This field is not unique.
+   * Example: `UA`
+   * </pre>
+   *
    * <code>string iata_code = 3 [json_name = "iataCode"];</code>
    * @return The bytes for iataCode.
    */
@@ -174,6 +198,15 @@ private static final long serialVersionUID = 0L;
   public static final int DISPLAY_ICAO_CODE_FIELD_NUMBER = 4;
   private volatile java.lang.Object displayIcaoCode_;
   /**
+   * <pre>
+   * The ICAO airline display code. This is the code that is displayed to
+   * users and is usually the same as the ICAO code. However, some airlines
+   * have different display codes when they are a subsidiary of another airline,
+   * but use the same ICAO code as their parent company. As such, this field
+   * may not be unique.
+   * Example: `UAL`
+   * </pre>
+   *
    * <code>string display_icao_code = 4 [json_name = "displayIcaoCode"];</code>
    * @return The displayIcaoCode.
    */
@@ -191,6 +224,15 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The ICAO airline display code. This is the code that is displayed to
+   * users and is usually the same as the ICAO code. However, some airlines
+   * have different display codes when they are a subsidiary of another airline,
+   * but use the same ICAO code as their parent company. As such, this field
+   * may not be unique.
+   * Example: `UAL`
+   * </pre>
+   *
    * <code>string display_icao_code = 4 [json_name = "displayIcaoCode"];</code>
    * @return The bytes for displayIcaoCode.
    */
@@ -212,6 +254,13 @@ private static final long serialVersionUID = 0L;
   public static final int DISPLAY_IATA_CODE_FIELD_NUMBER = 5;
   private volatile java.lang.Object displayIataCode_;
   /**
+   * <pre>
+   * The IATA airline display code. This is the code that is displayed to
+   * users and is usually the same as the IATA code. Currently, this will
+   * always be the same as the IATA code.
+   * Example: `UA`
+   * </pre>
+   *
    * <code>string display_iata_code = 5 [json_name = "displayIataCode"];</code>
    * @return The displayIataCode.
    */
@@ -229,6 +278,13 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The IATA airline display code. This is the code that is displayed to
+   * users and is usually the same as the IATA code. Currently, this will
+   * always be the same as the IATA code.
+   * Example: `UA`
+   * </pre>
+   *
    * <code>string display_iata_code = 5 [json_name = "displayIataCode"];</code>
    * @return The bytes for displayIataCode.
    */
@@ -250,6 +306,11 @@ private static final long serialVersionUID = 0L;
   public static final int NAME_FIELD_NUMBER = 6;
   private volatile java.lang.Object name_;
   /**
+   * <pre>
+   * The airline name.
+   * Example: `United Airlines`
+   * </pre>
+   *
    * <code>string name = 6 [json_name = "name"];</code>
    * @return The name.
    */
@@ -267,6 +328,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The airline name.
+   * Example: `United Airlines`
+   * </pre>
+   *
    * <code>string name = 6 [json_name = "name"];</code>
    * @return The bytes for name.
    */
@@ -490,6 +556,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * An Airline resource represents an airline.
+   * </pre>
+   *
    * Protobuf type {@code vasystem.api.v2.Airline}
    */
   public static final class Builder extends
@@ -712,6 +782,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     * Unique identifier for the airline.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -728,6 +802,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Unique identifier for the airline.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -745,6 +823,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Unique identifier for the airline.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -760,6 +842,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Unique identifier for the airline.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
@@ -770,6 +856,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Unique identifier for the airline.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -789,7 +879,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object icaoCode_ = "";
     /**
      * <pre>
-     * The ICAO code is the unique identifier of the airline.
+     * The ICAO airline code. Unique.
+     * Example: `UAL`
      * </pre>
      *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -809,7 +900,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ICAO code is the unique identifier of the airline.
+     * The ICAO airline code. Unique.
+     * Example: `UAL`
      * </pre>
      *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -830,7 +922,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ICAO code is the unique identifier of the airline.
+     * The ICAO airline code. Unique.
+     * Example: `UAL`
      * </pre>
      *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -849,7 +942,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ICAO code is the unique identifier of the airline.
+     * The ICAO airline code. Unique.
+     * Example: `UAL`
      * </pre>
      *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -863,7 +957,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ICAO code is the unique identifier of the airline.
+     * The ICAO airline code. Unique.
+     * Example: `UAL`
      * </pre>
      *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -884,6 +979,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object iataCode_ = "";
     /**
+     * <pre>
+     * The IATA airline code. This field is not unique.
+     * Example: `UA`
+     * </pre>
+     *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
      * @return The iataCode.
      */
@@ -900,6 +1000,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The IATA airline code. This field is not unique.
+     * Example: `UA`
+     * </pre>
+     *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
      * @return The bytes for iataCode.
      */
@@ -917,6 +1022,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The IATA airline code. This field is not unique.
+     * Example: `UA`
+     * </pre>
+     *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
      * @param value The iataCode to set.
      * @return This builder for chaining.
@@ -932,6 +1042,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The IATA airline code. This field is not unique.
+     * Example: `UA`
+     * </pre>
+     *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
      * @return This builder for chaining.
      */
@@ -942,6 +1057,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The IATA airline code. This field is not unique.
+     * Example: `UA`
+     * </pre>
+     *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
      * @param value The bytes for iataCode to set.
      * @return This builder for chaining.
@@ -960,6 +1080,15 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object displayIcaoCode_ = "";
     /**
+     * <pre>
+     * The ICAO airline display code. This is the code that is displayed to
+     * users and is usually the same as the ICAO code. However, some airlines
+     * have different display codes when they are a subsidiary of another airline,
+     * but use the same ICAO code as their parent company. As such, this field
+     * may not be unique.
+     * Example: `UAL`
+     * </pre>
+     *
      * <code>string display_icao_code = 4 [json_name = "displayIcaoCode"];</code>
      * @return The displayIcaoCode.
      */
@@ -976,6 +1105,15 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ICAO airline display code. This is the code that is displayed to
+     * users and is usually the same as the ICAO code. However, some airlines
+     * have different display codes when they are a subsidiary of another airline,
+     * but use the same ICAO code as their parent company. As such, this field
+     * may not be unique.
+     * Example: `UAL`
+     * </pre>
+     *
      * <code>string display_icao_code = 4 [json_name = "displayIcaoCode"];</code>
      * @return The bytes for displayIcaoCode.
      */
@@ -993,6 +1131,15 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ICAO airline display code. This is the code that is displayed to
+     * users and is usually the same as the ICAO code. However, some airlines
+     * have different display codes when they are a subsidiary of another airline,
+     * but use the same ICAO code as their parent company. As such, this field
+     * may not be unique.
+     * Example: `UAL`
+     * </pre>
+     *
      * <code>string display_icao_code = 4 [json_name = "displayIcaoCode"];</code>
      * @param value The displayIcaoCode to set.
      * @return This builder for chaining.
@@ -1008,6 +1155,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ICAO airline display code. This is the code that is displayed to
+     * users and is usually the same as the ICAO code. However, some airlines
+     * have different display codes when they are a subsidiary of another airline,
+     * but use the same ICAO code as their parent company. As such, this field
+     * may not be unique.
+     * Example: `UAL`
+     * </pre>
+     *
      * <code>string display_icao_code = 4 [json_name = "displayIcaoCode"];</code>
      * @return This builder for chaining.
      */
@@ -1018,6 +1174,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ICAO airline display code. This is the code that is displayed to
+     * users and is usually the same as the ICAO code. However, some airlines
+     * have different display codes when they are a subsidiary of another airline,
+     * but use the same ICAO code as their parent company. As such, this field
+     * may not be unique.
+     * Example: `UAL`
+     * </pre>
+     *
      * <code>string display_icao_code = 4 [json_name = "displayIcaoCode"];</code>
      * @param value The bytes for displayIcaoCode to set.
      * @return This builder for chaining.
@@ -1036,6 +1201,13 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object displayIataCode_ = "";
     /**
+     * <pre>
+     * The IATA airline display code. This is the code that is displayed to
+     * users and is usually the same as the IATA code. Currently, this will
+     * always be the same as the IATA code.
+     * Example: `UA`
+     * </pre>
+     *
      * <code>string display_iata_code = 5 [json_name = "displayIataCode"];</code>
      * @return The displayIataCode.
      */
@@ -1052,6 +1224,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The IATA airline display code. This is the code that is displayed to
+     * users and is usually the same as the IATA code. Currently, this will
+     * always be the same as the IATA code.
+     * Example: `UA`
+     * </pre>
+     *
      * <code>string display_iata_code = 5 [json_name = "displayIataCode"];</code>
      * @return The bytes for displayIataCode.
      */
@@ -1069,6 +1248,13 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The IATA airline display code. This is the code that is displayed to
+     * users and is usually the same as the IATA code. Currently, this will
+     * always be the same as the IATA code.
+     * Example: `UA`
+     * </pre>
+     *
      * <code>string display_iata_code = 5 [json_name = "displayIataCode"];</code>
      * @param value The displayIataCode to set.
      * @return This builder for chaining.
@@ -1084,6 +1270,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The IATA airline display code. This is the code that is displayed to
+     * users and is usually the same as the IATA code. Currently, this will
+     * always be the same as the IATA code.
+     * Example: `UA`
+     * </pre>
+     *
      * <code>string display_iata_code = 5 [json_name = "displayIataCode"];</code>
      * @return This builder for chaining.
      */
@@ -1094,6 +1287,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The IATA airline display code. This is the code that is displayed to
+     * users and is usually the same as the IATA code. Currently, this will
+     * always be the same as the IATA code.
+     * Example: `UA`
+     * </pre>
+     *
      * <code>string display_iata_code = 5 [json_name = "displayIataCode"];</code>
      * @param value The bytes for displayIataCode to set.
      * @return This builder for chaining.
@@ -1112,6 +1312,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     * The airline name.
+     * Example: `United Airlines`
+     * </pre>
+     *
      * <code>string name = 6 [json_name = "name"];</code>
      * @return The name.
      */
@@ -1128,6 +1333,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The airline name.
+     * Example: `United Airlines`
+     * </pre>
+     *
      * <code>string name = 6 [json_name = "name"];</code>
      * @return The bytes for name.
      */
@@ -1145,6 +1355,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The airline name.
+     * Example: `United Airlines`
+     * </pre>
+     *
      * <code>string name = 6 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
@@ -1160,6 +1375,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The airline name.
+     * Example: `United Airlines`
+     * </pre>
+     *
      * <code>string name = 6 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
@@ -1170,6 +1390,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The airline name.
+     * Example: `United Airlines`
+     * </pre>
+     *
      * <code>string name = 6 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.

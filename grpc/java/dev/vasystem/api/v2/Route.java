@@ -4,6 +4,10 @@
 package dev.vasystem.api.v2;
 
 /**
+ * <pre>
+ * A Route represents a regularly scheduled flight between two airports.
+ * </pre>
+ *
  * Protobuf type {@code vasystem.api.v2.Route}
  */
 public final class Route extends
@@ -136,6 +140,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * This does not include the airline code.
+   * Example: `1234`
    * </pre>
    *
    * <code>string icao_flight_number = 3 [json_name = "icaoFlightNumber"];</code>
@@ -157,6 +162,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * This does not include the airline code.
+   * Example: `1234`
    * </pre>
    *
    * <code>string icao_flight_number = 3 [json_name = "icaoFlightNumber"];</code>
@@ -257,7 +263,7 @@ private static final long serialVersionUID = 0L;
   private dev.vasystem.api.v2.TimeOfDay departureTime_;
   /**
    * <pre>
-   * Departure time is in UTC.
+   * The departure time is in UTC.
    * </pre>
    *
    * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -269,7 +275,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Departure time is in UTC.
+   * The departure time is in UTC.
    * </pre>
    *
    * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -281,7 +287,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Departure time is in UTC.
+   * The departure time is in UTC.
    * </pre>
    *
    * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -295,7 +301,7 @@ private static final long serialVersionUID = 0L;
   private dev.vasystem.api.v2.TimeOfDay arrivalTime_;
   /**
    * <pre>
-   * Arrival time is in UTC.
+   * The arrival time is in UTC.
    * </pre>
    *
    * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -307,7 +313,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Arrival time is in UTC.
+   * The arrival time is in UTC.
    * </pre>
    *
    * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -319,7 +325,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Arrival time is in UTC.
+   * The arrival time is in UTC.
    * </pre>
    *
    * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -333,8 +339,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Duration duration_;
   /**
    * <pre>
-   * The duration of this flight. Can also be calculated from the departure
-   * and arrival times.
+   * The duration of this flight. This field is purely provided for convenience and can also
+   * be calculated from the departure and arrival times.
    * </pre>
    *
    * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -346,8 +352,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The duration of this flight. Can also be calculated from the departure
-   * and arrival times.
+   * The duration of this flight. This field is purely provided for convenience and can also
+   * be calculated from the departure and arrival times.
    * </pre>
    *
    * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -359,8 +365,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The duration of this flight. Can also be calculated from the departure
-   * and arrival times.
+   * The duration of this flight. This field is purely provided for convenience and can also
+   * be calculated from the departure and arrival times.
    * </pre>
    *
    * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -512,7 +518,7 @@ private static final long serialVersionUID = 0L;
   private boolean archived_;
   /**
    * <pre>
-   * Whether this route is archived.
+   * Whether this route is archived. An archived route cannot be booked by pilots.
    * </pre>
    *
    * <code>bool archived = 16 [json_name = "archived"];</code>
@@ -834,6 +840,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A Route represents a regularly scheduled flight between two airports.
+   * </pre>
+   *
    * Protobuf type {@code vasystem.api.v2.Route}
    */
   public static final class Builder extends
@@ -1489,6 +1499,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This does not include the airline code.
+     * Example: `1234`
      * </pre>
      *
      * <code>string icao_flight_number = 3 [json_name = "icaoFlightNumber"];</code>
@@ -1509,6 +1520,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This does not include the airline code.
+     * Example: `1234`
      * </pre>
      *
      * <code>string icao_flight_number = 3 [json_name = "icaoFlightNumber"];</code>
@@ -1530,6 +1542,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This does not include the airline code.
+     * Example: `1234`
      * </pre>
      *
      * <code>string icao_flight_number = 3 [json_name = "icaoFlightNumber"];</code>
@@ -1549,6 +1562,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This does not include the airline code.
+     * Example: `1234`
      * </pre>
      *
      * <code>string icao_flight_number = 3 [json_name = "icaoFlightNumber"];</code>
@@ -1563,6 +1577,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This does not include the airline code.
+     * Example: `1234`
      * </pre>
      *
      * <code>string icao_flight_number = 3 [json_name = "icaoFlightNumber"];</code>
@@ -1896,7 +1911,7 @@ private static final long serialVersionUID = 0L;
         dev.vasystem.api.v2.TimeOfDay, dev.vasystem.api.v2.TimeOfDay.Builder, dev.vasystem.api.v2.TimeOfDayOrBuilder> departureTimeBuilder_;
     /**
      * <pre>
-     * Departure time is in UTC.
+     * The departure time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -1907,7 +1922,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Departure time is in UTC.
+     * The departure time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -1922,7 +1937,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Departure time is in UTC.
+     * The departure time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -1942,7 +1957,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Departure time is in UTC.
+     * The departure time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -1960,7 +1975,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Departure time is in UTC.
+     * The departure time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -1982,7 +1997,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Departure time is in UTC.
+     * The departure time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -2000,7 +2015,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Departure time is in UTC.
+     * The departure time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -2012,7 +2027,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Departure time is in UTC.
+     * The departure time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -2027,7 +2042,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Departure time is in UTC.
+     * The departure time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay departure_time = 7 [json_name = "departureTime"];</code>
@@ -2051,7 +2066,7 @@ private static final long serialVersionUID = 0L;
         dev.vasystem.api.v2.TimeOfDay, dev.vasystem.api.v2.TimeOfDay.Builder, dev.vasystem.api.v2.TimeOfDayOrBuilder> arrivalTimeBuilder_;
     /**
      * <pre>
-     * Arrival time is in UTC.
+     * The arrival time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -2062,7 +2077,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Arrival time is in UTC.
+     * The arrival time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -2077,7 +2092,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Arrival time is in UTC.
+     * The arrival time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -2097,7 +2112,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Arrival time is in UTC.
+     * The arrival time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -2115,7 +2130,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Arrival time is in UTC.
+     * The arrival time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -2137,7 +2152,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Arrival time is in UTC.
+     * The arrival time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -2155,7 +2170,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Arrival time is in UTC.
+     * The arrival time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -2167,7 +2182,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Arrival time is in UTC.
+     * The arrival time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -2182,7 +2197,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Arrival time is in UTC.
+     * The arrival time is in UTC.
      * </pre>
      *
      * <code>.vasystem.api.v2.TimeOfDay arrival_time = 8 [json_name = "arrivalTime"];</code>
@@ -2206,8 +2221,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
     /**
      * <pre>
-     * The duration of this flight. Can also be calculated from the departure
-     * and arrival times.
+     * The duration of this flight. This field is purely provided for convenience and can also
+     * be calculated from the departure and arrival times.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -2218,8 +2233,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of this flight. Can also be calculated from the departure
-     * and arrival times.
+     * The duration of this flight. This field is purely provided for convenience and can also
+     * be calculated from the departure and arrival times.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -2234,8 +2249,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of this flight. Can also be calculated from the departure
-     * and arrival times.
+     * The duration of this flight. This field is purely provided for convenience and can also
+     * be calculated from the departure and arrival times.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -2255,8 +2270,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of this flight. Can also be calculated from the departure
-     * and arrival times.
+     * The duration of this flight. This field is purely provided for convenience and can also
+     * be calculated from the departure and arrival times.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -2274,8 +2289,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of this flight. Can also be calculated from the departure
-     * and arrival times.
+     * The duration of this flight. This field is purely provided for convenience and can also
+     * be calculated from the departure and arrival times.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -2297,8 +2312,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of this flight. Can also be calculated from the departure
-     * and arrival times.
+     * The duration of this flight. This field is purely provided for convenience and can also
+     * be calculated from the departure and arrival times.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -2316,8 +2331,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of this flight. Can also be calculated from the departure
-     * and arrival times.
+     * The duration of this flight. This field is purely provided for convenience and can also
+     * be calculated from the departure and arrival times.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -2329,8 +2344,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of this flight. Can also be calculated from the departure
-     * and arrival times.
+     * The duration of this flight. This field is purely provided for convenience and can also
+     * be calculated from the departure and arrival times.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -2345,8 +2360,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of this flight. Can also be calculated from the departure
-     * and arrival times.
+     * The duration of this flight. This field is purely provided for convenience and can also
+     * be calculated from the departure and arrival times.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration = 9 [json_name = "duration"];</code>
@@ -2868,7 +2883,7 @@ private static final long serialVersionUID = 0L;
     private boolean archived_ ;
     /**
      * <pre>
-     * Whether this route is archived.
+     * Whether this route is archived. An archived route cannot be booked by pilots.
      * </pre>
      *
      * <code>bool archived = 16 [json_name = "archived"];</code>
@@ -2880,7 +2895,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether this route is archived.
+     * Whether this route is archived. An archived route cannot be booked by pilots.
      * </pre>
      *
      * <code>bool archived = 16 [json_name = "archived"];</code>
@@ -2895,7 +2910,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether this route is archived.
+     * Whether this route is archived. An archived route cannot be booked by pilots.
      * </pre>
      *
      * <code>bool archived = 16 [json_name = "archived"];</code>

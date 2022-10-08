@@ -4,6 +4,11 @@
 package dev.vasystem.api.v2;
 
 /**
+ * <pre>
+ * The GetVirtualAirlineResponse message contains the response parameters for the
+ * GetVirtualAirline method.
+ * </pre>
+ *
  * Protobuf type {@code vasystem.api.v2.GetVirtualAirlineResponse}
  */
 public final class GetVirtualAirlineResponse extends
@@ -230,6 +235,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The GetVirtualAirlineResponse message contains the response parameters for the
+   * GetVirtualAirline method.
+   * </pre>
+   *
    * Protobuf type {@code vasystem.api.v2.GetVirtualAirlineResponse}
    */
   public static final class Builder extends

@@ -4,6 +4,11 @@
 package dev.vasystem.api.v2;
 
 /**
+ * <pre>
+ * The ListRoutesResponse message defines the response parameters for the
+ * ListRoutes method.
+ * </pre>
+ *
  * Protobuf type {@code vasystem.api.v2.ListRoutesResponse}
  */
 public final class ListRoutesResponse extends
@@ -48,6 +53,10 @@ private static final long serialVersionUID = 0L;
   public static final int ROUTES_FIELD_NUMBER = 1;
   private java.util.List<dev.vasystem.api.v2.Route> routes_;
   /**
+   * <pre>
+   * The list of routes.
+   * </pre>
+   *
    * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
    */
   @java.lang.Override
@@ -55,6 +64,10 @@ private static final long serialVersionUID = 0L;
     return routes_;
   }
   /**
+   * <pre>
+   * The list of routes.
+   * </pre>
+   *
    * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
    */
   @java.lang.Override
@@ -63,6 +76,10 @@ private static final long serialVersionUID = 0L;
     return routes_;
   }
   /**
+   * <pre>
+   * The list of routes.
+   * </pre>
+   *
    * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
    */
   @java.lang.Override
@@ -70,6 +87,10 @@ private static final long serialVersionUID = 0L;
     return routes_.size();
   }
   /**
+   * <pre>
+   * The list of routes.
+   * </pre>
+   *
    * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
    */
   @java.lang.Override
@@ -77,6 +98,10 @@ private static final long serialVersionUID = 0L;
     return routes_.get(index);
   }
   /**
+   * <pre>
+   * The list of routes.
+   * </pre>
+   *
    * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
    */
   @java.lang.Override
@@ -92,6 +117,8 @@ private static final long serialVersionUID = 0L;
    * The next_page_token value to include in a subsequent List request. When
    * paginating, all other parameters provided to List must match the call that
    * provided the page token.
+   * When this field is empty, there are no more results. However, if the
+   * field is non-empty, there may not be any more results on the next page.
    * </pre>
    *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -115,6 +142,8 @@ private static final long serialVersionUID = 0L;
    * The next_page_token value to include in a subsequent List request. When
    * paginating, all other parameters provided to List must match the call that
    * provided the page token.
+   * When this field is empty, there are no more results. However, if the
+   * field is non-empty, there may not be any more results on the next page.
    * </pre>
    *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -303,6 +332,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The ListRoutesResponse message defines the response parameters for the
+   * ListRoutes method.
+   * </pre>
+   *
    * Protobuf type {@code vasystem.api.v2.ListRoutesResponse}
    */
   public static final class Builder extends
@@ -533,6 +567,10 @@ private static final long serialVersionUID = 0L;
         dev.vasystem.api.v2.Route, dev.vasystem.api.v2.Route.Builder, dev.vasystem.api.v2.RouteOrBuilder> routesBuilder_;
 
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public java.util.List<dev.vasystem.api.v2.Route> getRoutesList() {
@@ -543,6 +581,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public int getRoutesCount() {
@@ -553,6 +595,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public dev.vasystem.api.v2.Route getRoutes(int index) {
@@ -563,6 +609,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public Builder setRoutes(
@@ -580,6 +630,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public Builder setRoutes(
@@ -594,6 +648,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public Builder addRoutes(dev.vasystem.api.v2.Route value) {
@@ -610,6 +668,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public Builder addRoutes(
@@ -627,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public Builder addRoutes(
@@ -641,6 +707,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public Builder addRoutes(
@@ -655,6 +725,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public Builder addAllRoutes(
@@ -670,6 +744,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public Builder clearRoutes() {
@@ -683,6 +761,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public Builder removeRoutes(int index) {
@@ -696,6 +778,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public dev.vasystem.api.v2.Route.Builder getRoutesBuilder(
@@ -703,6 +789,10 @@ private static final long serialVersionUID = 0L;
       return getRoutesFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public dev.vasystem.api.v2.RouteOrBuilder getRoutesOrBuilder(
@@ -713,6 +803,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public java.util.List<? extends dev.vasystem.api.v2.RouteOrBuilder> 
@@ -724,6 +818,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public dev.vasystem.api.v2.Route.Builder addRoutesBuilder() {
@@ -731,6 +829,10 @@ private static final long serialVersionUID = 0L;
           dev.vasystem.api.v2.Route.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public dev.vasystem.api.v2.Route.Builder addRoutesBuilder(
@@ -739,6 +841,10 @@ private static final long serialVersionUID = 0L;
           index, dev.vasystem.api.v2.Route.getDefaultInstance());
     }
     /**
+     * <pre>
+     * The list of routes.
+     * </pre>
+     *
      * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
      */
     public java.util.List<dev.vasystem.api.v2.Route.Builder> 
@@ -766,6 +872,8 @@ private static final long serialVersionUID = 0L;
      * The next_page_token value to include in a subsequent List request. When
      * paginating, all other parameters provided to List must match the call that
      * provided the page token.
+     * When this field is empty, there are no more results. However, if the
+     * field is non-empty, there may not be any more results on the next page.
      * </pre>
      *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -788,6 +896,8 @@ private static final long serialVersionUID = 0L;
      * The next_page_token value to include in a subsequent List request. When
      * paginating, all other parameters provided to List must match the call that
      * provided the page token.
+     * When this field is empty, there are no more results. However, if the
+     * field is non-empty, there may not be any more results on the next page.
      * </pre>
      *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -811,6 +921,8 @@ private static final long serialVersionUID = 0L;
      * The next_page_token value to include in a subsequent List request. When
      * paginating, all other parameters provided to List must match the call that
      * provided the page token.
+     * When this field is empty, there are no more results. However, if the
+     * field is non-empty, there may not be any more results on the next page.
      * </pre>
      *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -832,6 +944,8 @@ private static final long serialVersionUID = 0L;
      * The next_page_token value to include in a subsequent List request. When
      * paginating, all other parameters provided to List must match the call that
      * provided the page token.
+     * When this field is empty, there are no more results. However, if the
+     * field is non-empty, there may not be any more results on the next page.
      * </pre>
      *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -848,6 +962,8 @@ private static final long serialVersionUID = 0L;
      * The next_page_token value to include in a subsequent List request. When
      * paginating, all other parameters provided to List must match the call that
      * provided the page token.
+     * When this field is empty, there are no more results. However, if the
+     * field is non-empty, there may not be any more results on the next page.
      * </pre>
      *
      * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>

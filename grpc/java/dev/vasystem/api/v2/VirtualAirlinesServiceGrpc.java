@@ -3,6 +3,9 @@ package dev.vasystem.api.v2;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Retrieve virtual airline information.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.49.1)",
@@ -91,6 +94,9 @@ public final class VirtualAirlinesServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Retrieve virtual airline information.
+   * </pre>
    */
   public static abstract class VirtualAirlinesServiceImplBase implements io.grpc.BindableService {
 
@@ -119,6 +125,9 @@ public final class VirtualAirlinesServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Retrieve virtual airline information.
+   * </pre>
    */
   public static final class VirtualAirlinesServiceStub extends io.grpc.stub.AbstractAsyncStub<VirtualAirlinesServiceStub> {
     private VirtualAirlinesServiceStub(
@@ -146,6 +155,9 @@ public final class VirtualAirlinesServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Retrieve virtual airline information.
+   * </pre>
    */
   public static final class VirtualAirlinesServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<VirtualAirlinesServiceBlockingStub> {
     private VirtualAirlinesServiceBlockingStub(
@@ -172,6 +184,9 @@ public final class VirtualAirlinesServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Retrieve virtual airline information.
+   * </pre>
    */
   public static final class VirtualAirlinesServiceFutureStub extends io.grpc.stub.AbstractFutureStub<VirtualAirlinesServiceFutureStub> {
     private VirtualAirlinesServiceFutureStub(

@@ -8,6 +8,9 @@
 using grpc = global::Grpc.Core;
 
 namespace Vasystem.Api.V2 {
+  /// <summary>
+  /// Retrieve virtual airline information.
+  /// </summary>
   public static partial class VirtualAirlinesService
   {
     static readonly string __ServiceName = "vasystem.api.v2.VirtualAirlinesService";

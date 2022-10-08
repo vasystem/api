@@ -48,6 +48,9 @@ namespace Vasystem.Api.V2 {
 
   }
   #region Messages
+  /// <summary>
+  /// An AircraftType resource represents a type of aircraft, irrespective of the airline that operates it.
+  /// </summary>
   public sealed partial class AircraftType : pb::IMessage<AircraftType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -98,6 +101,9 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
+    /// <summary>
+    /// Unique identifier of the aircraft type.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
@@ -111,7 +117,8 @@ namespace Vasystem.Api.V2 {
     public const int IcaoCodeFieldNumber = 2;
     private string icaoCode_ = "";
     /// <summary>
-    /// The ICAO aircraft type code.
+    /// The ICAO aircraft type code. Unique.
+    /// Example: `B738`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -127,6 +134,7 @@ namespace Vasystem.Api.V2 {
     private string iataCode_ = "";
     /// <summary>
     /// The IATA aircraft type code.
+    /// Example: `738`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -140,6 +148,10 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 4;
     private string name_ = "";
+    /// <summary>
+    /// The name of the aircraft type.
+    /// Example: `Boeing 737-800`
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
@@ -354,6 +366,10 @@ namespace Vasystem.Api.V2 {
 
   }
 
+  /// <summary>
+  /// An AircraftModel resource represents a model of aircraft. An aircraft model is an aircraft type linked
+  /// to an airline and its configuration (usually seating configuration).
+  /// </summary>
   public sealed partial class AircraftModel : pb::IMessage<AircraftModel>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -404,6 +420,9 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
+    /// <summary>
+    /// Unique identifier of the aircraft model.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
@@ -416,6 +435,9 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "aircraft_type" field.</summary>
     public const int AircraftTypeFieldNumber = 2;
     private global::Vasystem.Api.V2.AircraftType aircraftType_;
+    /// <summary>
+    /// The type of aircraft.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Vasystem.Api.V2.AircraftType AircraftType {
@@ -428,6 +450,9 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "airline" field.</summary>
     public const int AirlineFieldNumber = 3;
     private global::Vasystem.Api.V2.Airline airline_;
+    /// <summary>
+    /// The airline that operates the aircraft model.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Vasystem.Api.V2.Airline Airline {
@@ -440,6 +465,10 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 4;
     private string name_ = "";
+    /// <summary>
+    /// The name of the aircraft model.
+    /// Example: `	Boeing 737-824(WL)`
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {

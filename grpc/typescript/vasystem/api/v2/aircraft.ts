@@ -15,47 +15,68 @@ import { MESSAGE_TYPE } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
 import { Airline } from "./airlines";
 /**
+ * An AircraftType resource represents a type of aircraft, irrespective of the airline that operates it.
+ *
  * @generated from protobuf message vasystem.api.v2.AircraftType
  */
 export interface AircraftType {
     /**
+     * Unique identifier of the aircraft type.
+     *
      * @generated from protobuf field: string id = 1;
      */
     id: string;
     /**
-     * The ICAO aircraft type code.
+     * The ICAO aircraft type code. Unique.
+     * Example: `B738`
      *
      * @generated from protobuf field: string icao_code = 2;
      */
     icaoCode: string;
     /**
      * The IATA aircraft type code.
+     * Example: `738`
      *
      * @generated from protobuf field: string iata_code = 3;
      */
     iataCode: string;
     /**
+     * The name of the aircraft type.
+     * Example: `Boeing 737-800`
+     *
      * @generated from protobuf field: string name = 4;
      */
     name: string;
 }
 /**
+ * An AircraftModel resource represents a model of aircraft. An aircraft model is an aircraft type linked
+ * to an airline and its configuration (usually seating configuration).
+ *
  * @generated from protobuf message vasystem.api.v2.AircraftModel
  */
 export interface AircraftModel {
     /**
+     * Unique identifier of the aircraft model.
+     *
      * @generated from protobuf field: string id = 1;
      */
     id: string;
     /**
+     * The type of aircraft.
+     *
      * @generated from protobuf field: vasystem.api.v2.AircraftType aircraft_type = 2;
      */
     aircraftType?: AircraftType;
     /**
+     * The airline that operates the aircraft model.
+     *
      * @generated from protobuf field: vasystem.api.v2.Airline airline = 3;
      */
     airline?: Airline;
     /**
+     * The name of the aircraft model.
+     * Example: `	Boeing 737-824(WL)`
+     *
      * @generated from protobuf field: string name = 4;
      */
     name: string;

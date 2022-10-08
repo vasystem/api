@@ -51,6 +51,10 @@ namespace Vasystem.Api.V2 {
 
   }
   #region Messages
+  /// <summary>
+  /// The ListAirlinesRequest message defines the request parameters for the
+  /// ListAirlines method.
+  /// </summary>
   public sealed partial class ListAirlinesRequest : pb::IMessage<ListAirlinesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -203,6 +207,10 @@ namespace Vasystem.Api.V2 {
 
   }
 
+  /// <summary>
+  /// The ListAirlinesResponse message defines the response parameters for the
+  /// ListAirlines method.
+  /// </summary>
   public sealed partial class ListAirlinesResponse : pb::IMessage<ListAirlinesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -381,6 +389,9 @@ namespace Vasystem.Api.V2 {
 
   }
 
+  /// <summary>
+  /// An Airline resource represents an airline.
+  /// </summary>
   public sealed partial class Airline : pb::IMessage<Airline>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -433,6 +444,9 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
+    /// <summary>
+    /// Unique identifier for the airline.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
@@ -446,7 +460,8 @@ namespace Vasystem.Api.V2 {
     public const int IcaoCodeFieldNumber = 2;
     private string icaoCode_ = "";
     /// <summary>
-    /// The ICAO code is the unique identifier of the airline.
+    /// The ICAO airline code. Unique.
+    /// Example: `UAL`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -460,6 +475,10 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "iata_code" field.</summary>
     public const int IataCodeFieldNumber = 3;
     private string iataCode_ = "";
+    /// <summary>
+    /// The IATA airline code. This field is not unique.
+    /// Example: `UA`
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string IataCode {
@@ -472,6 +491,14 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "display_icao_code" field.</summary>
     public const int DisplayIcaoCodeFieldNumber = 4;
     private string displayIcaoCode_ = "";
+    /// <summary>
+    /// The ICAO airline display code. This is the code that is displayed to
+    /// users and is usually the same as the ICAO code. However, some airlines
+    /// have different display codes when they are a subsidiary of another airline,
+    /// but use the same ICAO code as their parent company. As such, this field
+    /// may not be unique.
+    /// Example: `UAL`
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayIcaoCode {
@@ -484,6 +511,12 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "display_iata_code" field.</summary>
     public const int DisplayIataCodeFieldNumber = 5;
     private string displayIataCode_ = "";
+    /// <summary>
+    /// The IATA airline display code. This is the code that is displayed to
+    /// users and is usually the same as the IATA code. Currently, this will
+    /// always be the same as the IATA code.
+    /// Example: `UA`
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayIataCode {
@@ -496,6 +529,10 @@ namespace Vasystem.Api.V2 {
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 6;
     private string name_ = "";
+    /// <summary>
+    /// The airline name.
+    /// Example: `United Airlines`
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {

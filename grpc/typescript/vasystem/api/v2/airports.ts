@@ -14,18 +14,26 @@ import { reflectionMergePartial } from "@protobuf-ts/runtime";
 import { MESSAGE_TYPE } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
 /**
+ * An Airport resource represents an airport.
+ *
  * @generated from protobuf message vasystem.api.v2.Airport
  */
 export interface Airport {
     /**
+     * The unique identifier of the airport.
+     *
      * @generated from protobuf field: string id = 1;
      */
     id: string;
     /**
+     * The ICAO airport identifier. Unique.
+     *
      * @generated from protobuf field: string icao_code = 2;
      */
     icaoCode: string;
     /**
+     * The IATA airport identifier. This field is not unique.
+     *
      * @generated from protobuf field: string iata_code = 3;
      */
     iataCode: string;

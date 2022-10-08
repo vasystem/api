@@ -31,27 +31,27 @@ paths:
             tags:
                 - RoutesService
             summary: List routes
-            description: List routes
+            description: List routes. This is a paginated endpoint.
             operationId: RoutesService_ListRoutes
             parameters:
                 - name: airlineId
                   in: query
-                  description: Filter by airline.
+                  description: 'Filter by airline. Example: `01gevxx0g090m0a78xmvhtfre4`'
                   schema:
                     type: string
                 - name: departureIcao
                   in: query
-                  description: Filter by departure airport.
+                  description: 'Filter by departure airport. Example: `KJFK`'
                   schema:
                     type: string
                 - name: arrivalIcao
                   in: query
-                  description: Filter by arrival airport.
+                  description: 'Filter by arrival airport. Example: `YSSY`'
                   schema:
                     type: string
                 - name: icaoFlightNumber
                   in: query
-                  description: Filter by the flight number. This does not include the airline code.
+                  description: 'Filter by the flight number. This does not include the airline code. Example: `1234`'
                   schema:
                     type: string
                 - name: includeArchived
@@ -61,7 +61,7 @@ paths:
                     type: boolean
                 - name: pageSize
                   in: query
-                  description: Default is 100.
+                  description: The maximum number of results to return. Defaults to 100. Maximum is 1000.
                   schema:
                     type: integer
                     format: uint64
@@ -112,50 +112,66 @@ components:
             properties:
                 id:
                     type: string
+                    description: Unique identifier of the aircraft model.
                 aircraftType:
                     $ref: '#/components/schemas/AircraftType'
                 airline:
                     $ref: '#/components/schemas/Airline'
                 name:
                     type: string
+                    description: "The name of the aircraft model. Example: `\tBoeing 737-824(WL)`"
+            description: An AircraftModel resource represents a model of aircraft. An aircraft model is an aircraft type linked to an airline and its configuration (usually seating configuration).
         AircraftType:
             type: object
             properties:
                 id:
                     type: string
+                    description: Unique identifier of the aircraft type.
                 icaoCode:
                     type: string
-                    description: The ICAO aircraft type code.
+                    description: 'The ICAO aircraft type code. Unique. Example: `B738`'
                 iataCode:
                     type: string
-                    description: The IATA aircraft type code.
+                    description: 'The IATA aircraft type code. Example: `738`'
                 name:
                     type: string
+                    description: 'The name of the aircraft type. Example: `Boeing 737-800`'
+            description: An AircraftType resource represents a type of aircraft, irrespective of the airline that operates it.
         Airline:
             type: object
             properties:
                 id:
                     type: string
+                    description: Unique identifier for the airline.
                 icaoCode:
                     type: string
-                    description: The ICAO code is the unique identifier of the airline.
+                    description: 'The ICAO airline code. Unique. Example: `UAL`'
                 iataCode:
                     type: string
+                    description: 'The IATA airline code. This field is not unique. Example: `UA`'
                 displayIcaoCode:
                     type: string
+                    description: 'The ICAO airline display code. This is the code that is displayed to users and is usually the same as the ICAO code. However, some airlines have different display codes when they are a subsidiary of another airline, but use the same ICAO code as their parent company. As such, this field may not be unique. Example: `UAL`'
                 displayIataCode:
                     type: string
+                    description: 'The IATA airline display code. This is the code that is displayed to users and is usually the same as the IATA code. Currently, this will always be the same as the IATA code. Example: `UA`'
                 name:
                     type: string
+                    description: 'The airline name. Example: `United Airlines`'
+            description: An Airline resource represents an airline.
         Airport:
             type: object
             properties:
                 id:
                     type: string
+                    description: The unique identifier of the airport.
                 icaoCode:
                     type: string
+                    description: The ICAO airport identifier. Unique.
                 iataCode:
                     type: string
+                    description: The IATA airport identifier. This field is not unique.
+            description: An Airport resource represents an airport.
         Duration:
             type: object
             properties:
@@ -173,6 +189,7 @@ components:
             properties:
                 virtualAirline:
                     $ref: '#/components/schemas/VirtualAirline'
+            description: The GetVirtualAirlineResponse message contains the response parameters for the GetVirtualAirline method.
         GoogleProtobufAny:
             type: object
             properties:
@@ -188,6 +205,7 @@ components:
                     type: array
                     items:
                         $ref: '#/components/schemas/Airline'
+            description: The ListAirlinesResponse message defines the response parameters for the ListAirlines method.
         ListRoutesResponse:
             type: object
             properties:
@@ -195,9 +213,11 @@ components:
                     type: array
                     items:
                         $ref: '#/components/schemas/Route'
+                    description: The list of routes.
                 nextPageToken:
                     type: string
-                    description: The next_page_token value to include in a subsequent List request. When paginating, all other parameters provided to List must match the call that provided the page token.
+                    description: The next_page_token value to include in a subsequent List request. When paginating, all other parameters provided to List must match the call that provided the page token. When this field is empty, there are no more results. However, if the field is non-empty, there may not be any more results on the next page.
+            description: The ListRoutesResponse message defines the response parameters for the ListRoutes method.
         Route:
             type: object
             properties:
@@ -208,7 +228,7 @@ components:
                     $ref: '#/components/schemas/Airline'
                 icaoFlightNumber:
                     type: string
-                    description: This does not include the airline code.
+                    description: 'This does not include the airline code. Example: `1234`'
                 departure:
                     $ref: '#/components/schemas/Airport'
                 arrival:
@@ -241,7 +261,8 @@ components:
                     description: The aircraft models that operate this route.
                 archived:
                     type: boolean
-                    description: Whether this route is archived.
+                    description: Whether this route is archived. An archived route cannot be booked by pilots.
+            description: A Route represents a regularly scheduled flight between two airports.
         Status:
             type: object
             properties:
@@ -283,10 +304,15 @@ components:
             properties:
                 name:
                     type: string
-                    description: The name of the virtual airline.
+                    description: 'The name of the virtual airline. Example: `Star Alliance Virtual`'
                 url:
                     type: string
+                    description: 'The main website URL of the virtual airline. Example: `https://staralliancevirtual.org`'
+            description: A VirtualAirline resource represents a virtual airline. All methods in the API operate on a single virtual airline.
 tags:
     - name: AirlinesService
+      description: Retrieve airline information.
     - name: RoutesService
+      description: Retrieve route information.
     - name: VirtualAirlinesService
+      description: Retrieve virtual airline information.

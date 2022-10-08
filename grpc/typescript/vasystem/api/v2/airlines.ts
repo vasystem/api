@@ -15,11 +15,17 @@ import { reflectionMergePartial } from "@protobuf-ts/runtime";
 import { MESSAGE_TYPE } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
 /**
+ * The ListAirlinesRequest message defines the request parameters for the
+ * ListAirlines method.
+ *
  * @generated from protobuf message vasystem.api.v2.ListAirlinesRequest
  */
 export interface ListAirlinesRequest {
 }
 /**
+ * The ListAirlinesResponse message defines the response parameters for the
+ * ListAirlines method.
+ *
  * @generated from protobuf message vasystem.api.v2.ListAirlinesResponse
  */
 export interface ListAirlinesResponse {
@@ -29,32 +35,55 @@ export interface ListAirlinesResponse {
     airlines: Airline[];
 }
 /**
+ * An Airline resource represents an airline.
+ *
  * @generated from protobuf message vasystem.api.v2.Airline
  */
 export interface Airline {
     /**
+     * Unique identifier for the airline.
+     *
      * @generated from protobuf field: string id = 1;
      */
     id: string;
     /**
-     * The ICAO code is the unique identifier of the airline.
+     * The ICAO airline code. Unique.
+     * Example: `UAL`
      *
      * @generated from protobuf field: string icao_code = 2;
      */
     icaoCode: string;
     /**
+     * The IATA airline code. This field is not unique.
+     * Example: `UA`
+     *
      * @generated from protobuf field: string iata_code = 3;
      */
     iataCode: string;
     /**
+     * The ICAO airline display code. This is the code that is displayed to
+     * users and is usually the same as the ICAO code. However, some airlines
+     * have different display codes when they are a subsidiary of another airline,
+     * but use the same ICAO code as their parent company. As such, this field
+     * may not be unique.
+     * Example: `UAL`
+     *
      * @generated from protobuf field: string display_icao_code = 4;
      */
     displayIcaoCode: string;
     /**
+     * The IATA airline display code. This is the code that is displayed to
+     * users and is usually the same as the IATA code. Currently, this will
+     * always be the same as the IATA code.
+     * Example: `UA`
+     *
      * @generated from protobuf field: string display_iata_code = 5;
      */
     displayIataCode: string;
     /**
+     * The airline name.
+     * Example: `United Airlines`
+     *
      * @generated from protobuf field: string name = 6;
      */
     name: string;

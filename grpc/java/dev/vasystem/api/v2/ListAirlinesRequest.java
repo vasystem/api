@@ -4,6 +4,11 @@
 package dev.vasystem.api.v2;
 
 /**
+ * <pre>
+ * The ListAirlinesRequest message defines the request parameters for the
+ * ListAirlines method.
+ * </pre>
+ *
  * Protobuf type {@code vasystem.api.v2.ListAirlinesRequest}
  */
 public final class ListAirlinesRequest extends
@@ -188,6 +193,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The ListAirlinesRequest message defines the request parameters for the
+   * ListAirlines method.
+   * </pre>
+   *
    * Protobuf type {@code vasystem.api.v2.ListAirlinesRequest}
    */
   public static final class Builder extends

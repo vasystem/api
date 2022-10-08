@@ -8,24 +8,44 @@ public interface ListRoutesResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The list of routes.
+   * </pre>
+   *
    * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
    */
   java.util.List<dev.vasystem.api.v2.Route> 
       getRoutesList();
   /**
+   * <pre>
+   * The list of routes.
+   * </pre>
+   *
    * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
    */
   dev.vasystem.api.v2.Route getRoutes(int index);
   /**
+   * <pre>
+   * The list of routes.
+   * </pre>
+   *
    * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
    */
   int getRoutesCount();
   /**
+   * <pre>
+   * The list of routes.
+   * </pre>
+   *
    * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
    */
   java.util.List<? extends dev.vasystem.api.v2.RouteOrBuilder> 
       getRoutesOrBuilderList();
   /**
+   * <pre>
+   * The list of routes.
+   * </pre>
+   *
    * <code>repeated .vasystem.api.v2.Route routes = 1 [json_name = "routes"];</code>
    */
   dev.vasystem.api.v2.RouteOrBuilder getRoutesOrBuilder(
@@ -36,6 +56,8 @@ public interface ListRoutesResponseOrBuilder extends
    * The next_page_token value to include in a subsequent List request. When
    * paginating, all other parameters provided to List must match the call that
    * provided the page token.
+   * When this field is empty, there are no more results. However, if the
+   * field is non-empty, there may not be any more results on the next page.
    * </pre>
    *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
@@ -47,6 +69,8 @@ public interface ListRoutesResponseOrBuilder extends
    * The next_page_token value to include in a subsequent List request. When
    * paginating, all other parameters provided to List must match the call that
    * provided the page token.
+   * When this field is empty, there are no more results. However, if the
+   * field is non-empty, there may not be any more results on the next page.
    * </pre>
    *
    * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>

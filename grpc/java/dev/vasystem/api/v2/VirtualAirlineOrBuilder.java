@@ -10,6 +10,7 @@ public interface VirtualAirlineOrBuilder extends
   /**
    * <pre>
    * The name of the virtual airline.
+   * Example: `Star Alliance Virtual`
    * </pre>
    *
    * <code>string name = 1 [json_name = "name"];</code>
@@ -19,6 +20,7 @@ public interface VirtualAirlineOrBuilder extends
   /**
    * <pre>
    * The name of the virtual airline.
+   * Example: `Star Alliance Virtual`
    * </pre>
    *
    * <code>string name = 1 [json_name = "name"];</code>
@@ -28,11 +30,21 @@ public interface VirtualAirlineOrBuilder extends
       getNameBytes();
 
   /**
+   * <pre>
+   * The main website URL of the virtual airline.
+   * Example: `https://staralliancevirtual.org`
+   * </pre>
+   *
    * <code>string url = 2 [json_name = "url"];</code>
    * @return The url.
    */
   java.lang.String getUrl();
   /**
+   * <pre>
+   * The main website URL of the virtual airline.
+   * Example: `https://staralliancevirtual.org`
+   * </pre>
+   *
    * <code>string url = 2 [json_name = "url"];</code>
    * @return The bytes for url.
    */

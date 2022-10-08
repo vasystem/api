@@ -4,6 +4,11 @@
 package dev.vasystem.api.v2;
 
 /**
+ * <pre>
+ * An AircraftModel resource represents a model of aircraft. An aircraft model is an aircraft type linked
+ * to an airline and its configuration (usually seating configuration).
+ * </pre>
+ *
  * Protobuf type {@code vasystem.api.v2.AircraftModel}
  */
 public final class AircraftModel extends
@@ -48,6 +53,10 @@ private static final long serialVersionUID = 0L;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
+   * <pre>
+   * Unique identifier of the aircraft model.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
@@ -65,6 +74,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Unique identifier of the aircraft model.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -86,6 +99,10 @@ private static final long serialVersionUID = 0L;
   public static final int AIRCRAFT_TYPE_FIELD_NUMBER = 2;
   private dev.vasystem.api.v2.AircraftType aircraftType_;
   /**
+   * <pre>
+   * The type of aircraft.
+   * </pre>
+   *
    * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
    * @return Whether the aircraftType field is set.
    */
@@ -94,6 +111,10 @@ private static final long serialVersionUID = 0L;
     return aircraftType_ != null;
   }
   /**
+   * <pre>
+   * The type of aircraft.
+   * </pre>
+   *
    * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
    * @return The aircraftType.
    */
@@ -102,6 +123,10 @@ private static final long serialVersionUID = 0L;
     return aircraftType_ == null ? dev.vasystem.api.v2.AircraftType.getDefaultInstance() : aircraftType_;
   }
   /**
+   * <pre>
+   * The type of aircraft.
+   * </pre>
+   *
    * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
    */
   @java.lang.Override
@@ -112,6 +137,10 @@ private static final long serialVersionUID = 0L;
   public static final int AIRLINE_FIELD_NUMBER = 3;
   private dev.vasystem.api.v2.Airline airline_;
   /**
+   * <pre>
+   * The airline that operates the aircraft model.
+   * </pre>
+   *
    * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
    * @return Whether the airline field is set.
    */
@@ -120,6 +149,10 @@ private static final long serialVersionUID = 0L;
     return airline_ != null;
   }
   /**
+   * <pre>
+   * The airline that operates the aircraft model.
+   * </pre>
+   *
    * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
    * @return The airline.
    */
@@ -128,6 +161,10 @@ private static final long serialVersionUID = 0L;
     return airline_ == null ? dev.vasystem.api.v2.Airline.getDefaultInstance() : airline_;
   }
   /**
+   * <pre>
+   * The airline that operates the aircraft model.
+   * </pre>
+   *
    * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
    */
   @java.lang.Override
@@ -138,6 +175,11 @@ private static final long serialVersionUID = 0L;
   public static final int NAME_FIELD_NUMBER = 4;
   private volatile java.lang.Object name_;
   /**
+   * <pre>
+   * The name of the aircraft model.
+   * Example: `	Boeing 737-824(WL)`
+   * </pre>
+   *
    * <code>string name = 4 [json_name = "name"];</code>
    * @return The name.
    */
@@ -155,6 +197,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The name of the aircraft model.
+   * Example: `	Boeing 737-824(WL)`
+   * </pre>
+   *
    * <code>string name = 4 [json_name = "name"];</code>
    * @return The bytes for name.
    */
@@ -370,6 +417,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * An AircraftModel resource represents a model of aircraft. An aircraft model is an aircraft type linked
+   * to an airline and its configuration (usually seating configuration).
+   * </pre>
+   *
    * Protobuf type {@code vasystem.api.v2.AircraftModel}
    */
   public static final class Builder extends
@@ -586,6 +638,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     * Unique identifier of the aircraft model.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -602,6 +658,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Unique identifier of the aircraft model.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -619,6 +679,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Unique identifier of the aircraft model.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -634,6 +698,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Unique identifier of the aircraft model.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
@@ -644,6 +712,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Unique identifier of the aircraft model.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -664,6 +736,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         dev.vasystem.api.v2.AircraftType, dev.vasystem.api.v2.AircraftType.Builder, dev.vasystem.api.v2.AircraftTypeOrBuilder> aircraftTypeBuilder_;
     /**
+     * <pre>
+     * The type of aircraft.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
      * @return Whether the aircraftType field is set.
      */
@@ -671,6 +747,10 @@ private static final long serialVersionUID = 0L;
       return aircraftTypeBuilder_ != null || aircraftType_ != null;
     }
     /**
+     * <pre>
+     * The type of aircraft.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
      * @return The aircraftType.
      */
@@ -682,6 +762,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The type of aircraft.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
      */
     public Builder setAircraftType(dev.vasystem.api.v2.AircraftType value) {
@@ -698,6 +782,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The type of aircraft.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
      */
     public Builder setAircraftType(
@@ -712,6 +800,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The type of aircraft.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
      */
     public Builder mergeAircraftType(dev.vasystem.api.v2.AircraftType value) {
@@ -730,6 +822,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The type of aircraft.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
      */
     public Builder clearAircraftType() {
@@ -744,6 +840,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The type of aircraft.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
      */
     public dev.vasystem.api.v2.AircraftType.Builder getAircraftTypeBuilder() {
@@ -752,6 +852,10 @@ private static final long serialVersionUID = 0L;
       return getAircraftTypeFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The type of aircraft.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
      */
     public dev.vasystem.api.v2.AircraftTypeOrBuilder getAircraftTypeOrBuilder() {
@@ -763,6 +867,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The type of aircraft.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -783,6 +891,10 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         dev.vasystem.api.v2.Airline, dev.vasystem.api.v2.Airline.Builder, dev.vasystem.api.v2.AirlineOrBuilder> airlineBuilder_;
     /**
+     * <pre>
+     * The airline that operates the aircraft model.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
      * @return Whether the airline field is set.
      */
@@ -790,6 +902,10 @@ private static final long serialVersionUID = 0L;
       return airlineBuilder_ != null || airline_ != null;
     }
     /**
+     * <pre>
+     * The airline that operates the aircraft model.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
      * @return The airline.
      */
@@ -801,6 +917,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The airline that operates the aircraft model.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
      */
     public Builder setAirline(dev.vasystem.api.v2.Airline value) {
@@ -817,6 +937,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The airline that operates the aircraft model.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
      */
     public Builder setAirline(
@@ -831,6 +955,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The airline that operates the aircraft model.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
      */
     public Builder mergeAirline(dev.vasystem.api.v2.Airline value) {
@@ -849,6 +977,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The airline that operates the aircraft model.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
      */
     public Builder clearAirline() {
@@ -863,6 +995,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The airline that operates the aircraft model.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
      */
     public dev.vasystem.api.v2.Airline.Builder getAirlineBuilder() {
@@ -871,6 +1007,10 @@ private static final long serialVersionUID = 0L;
       return getAirlineFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * The airline that operates the aircraft model.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
      */
     public dev.vasystem.api.v2.AirlineOrBuilder getAirlineOrBuilder() {
@@ -882,6 +1022,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The airline that operates the aircraft model.
+     * </pre>
+     *
      * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -900,6 +1044,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     * The name of the aircraft model.
+     * Example: `	Boeing 737-824(WL)`
+     * </pre>
+     *
      * <code>string name = 4 [json_name = "name"];</code>
      * @return The name.
      */
@@ -916,6 +1065,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the aircraft model.
+     * Example: `	Boeing 737-824(WL)`
+     * </pre>
+     *
      * <code>string name = 4 [json_name = "name"];</code>
      * @return The bytes for name.
      */
@@ -933,6 +1087,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the aircraft model.
+     * Example: `	Boeing 737-824(WL)`
+     * </pre>
+     *
      * <code>string name = 4 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
@@ -948,6 +1107,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the aircraft model.
+     * Example: `	Boeing 737-824(WL)`
+     * </pre>
+     *
      * <code>string name = 4 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
@@ -958,6 +1122,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the aircraft model.
+     * Example: `	Boeing 737-824(WL)`
+     * </pre>
+     *
      * <code>string name = 4 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.

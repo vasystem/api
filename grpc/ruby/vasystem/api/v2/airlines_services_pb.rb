@@ -8,6 +8,7 @@ module Vasystem
   module Api
     module V2
       module AirlinesService
+        # Retrieve airline information.
         class Service
 
           include ::GRPC::GenericService

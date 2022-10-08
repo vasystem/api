@@ -12,17 +12,21 @@ import type { ListRoutesRequest } from "./routes";
 import type { UnaryCall } from "@protobuf-ts/runtime-rpc";
 import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
 /**
+ * Retrieve route information.
+ *
  * @generated from protobuf service vasystem.api.v2.RoutesService
  */
 export interface IRoutesServiceClient {
     /**
-     * List routes
+     * List routes. This is a paginated endpoint.
      *
      * @generated from protobuf rpc: ListRoutes(vasystem.api.v2.ListRoutesRequest) returns (vasystem.api.v2.ListRoutesResponse);
      */
     listRoutes(input: ListRoutesRequest, options?: RpcOptions): UnaryCall<ListRoutesRequest, ListRoutesResponse>;
 }
 /**
+ * Retrieve route information.
+ *
  * @generated from protobuf service vasystem.api.v2.RoutesService
  */
 export class RoutesServiceClient implements IRoutesServiceClient, ServiceInfo {
@@ -32,7 +36,7 @@ export class RoutesServiceClient implements IRoutesServiceClient, ServiceInfo {
     constructor(private readonly _transport: RpcTransport) {
     }
     /**
-     * List routes
+     * List routes. This is a paginated endpoint.
      *
      * @generated from protobuf rpc: ListRoutes(vasystem.api.v2.ListRoutesRequest) returns (vasystem.api.v2.ListRoutesResponse);
      */

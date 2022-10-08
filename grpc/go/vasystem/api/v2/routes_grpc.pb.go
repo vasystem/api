@@ -22,7 +22,7 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type RoutesServiceClient interface {
-	// List routes
+	// List routes. This is a paginated endpoint.
 	ListRoutes(ctx context.Context, in *ListRoutesRequest, opts ...grpc.CallOption) (*ListRoutesResponse, error)
 }
 
@@ -47,7 +47,7 @@ func (c *routesServiceClient) ListRoutes(ctx context.Context, in *ListRoutesRequ
 // All implementations must embed UnimplementedRoutesServiceServer
 // for forward compatibility
 type RoutesServiceServer interface {
-	// List routes
+	// List routes. This is a paginated endpoint.
 	ListRoutes(context.Context, *ListRoutesRequest) (*ListRoutesResponse, error)
 	mustEmbedUnimplementedRoutesServiceServer()
 }

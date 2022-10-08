@@ -29,6 +29,7 @@ namespace vasystem {
 namespace api {
 namespace v2 {
 
+// Retrieve virtual airline information.
 class VirtualAirlinesService final {
  public:
   static constexpr char const* service_full_name() {

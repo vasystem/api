@@ -21,29 +21,36 @@ import { TimeOfDay } from "./timeofday";
 import { Airport } from "./airports";
 import { Airline } from "./airlines";
 /**
+ * The ListRoutesRequest message defines the request parameters for the
+ * ListRoutes method.
+ *
  * @generated from protobuf message vasystem.api.v2.ListRoutesRequest
  */
 export interface ListRoutesRequest {
     /**
      * Filter by airline.
+     * Example: `01gevxx0g090m0a78xmvhtfre4`
      *
      * @generated from protobuf field: string airline_id = 1;
      */
     airlineId: string;
     /**
      * Filter by departure airport.
+     * Example: `KJFK`
      *
      * @generated from protobuf field: string departure_icao = 2;
      */
     departureIcao: string;
     /**
      * Filter by arrival airport.
+     * Example: `YSSY`
      *
      * @generated from protobuf field: string arrival_icao = 3;
      */
     arrivalIcao: string;
     /**
      * Filter by the flight number. This does not include the airline code.
+     * Example: `1234`
      *
      * @generated from protobuf field: string icao_flight_number = 4;
      */
@@ -55,7 +62,7 @@ export interface ListRoutesRequest {
      */
     includeArchived: boolean;
     /**
-     * Default is 100.
+     * The maximum number of results to return. Defaults to 100. Maximum is 1000.
      *
      * @generated from protobuf field: uint64 page_size = 14;
      */
@@ -69,10 +76,15 @@ export interface ListRoutesRequest {
     pageToken: string;
 }
 /**
+ * The ListRoutesResponse message defines the response parameters for the
+ * ListRoutes method.
+ *
  * @generated from protobuf message vasystem.api.v2.ListRoutesResponse
  */
 export interface ListRoutesResponse {
     /**
+     * The list of routes.
+     *
      * @generated from protobuf field: repeated vasystem.api.v2.Route routes = 1;
      */
     routes: Route[];
@@ -80,12 +92,16 @@ export interface ListRoutesResponse {
      * The next_page_token value to include in a subsequent List request. When
      * paginating, all other parameters provided to List must match the call that
      * provided the page token.
+     * When this field is empty, there are no more results. However, if the
+     * field is non-empty, there may not be any more results on the next page.
      *
      * @generated from protobuf field: string next_page_token = 2;
      */
     nextPageToken: string;
 }
 /**
+ * A Route represents a regularly scheduled flight between two airports.
+ *
  * @generated from protobuf message vasystem.api.v2.Route
  */
 export interface Route {
@@ -103,6 +119,7 @@ export interface Route {
     airline?: Airline;
     /**
      * This does not include the airline code.
+     * Example: `1234`
      *
      * @generated from protobuf field: string icao_flight_number = 3;
      */
@@ -120,20 +137,20 @@ export interface Route {
      */
     arrival?: Airport;
     /**
-     * Departure time is in UTC.
+     * The departure time is in UTC.
      *
      * @generated from protobuf field: vasystem.api.v2.TimeOfDay departure_time = 7;
      */
     departureTime?: TimeOfDay;
     /**
-     * Arrival time is in UTC.
+     * The arrival time is in UTC.
      *
      * @generated from protobuf field: vasystem.api.v2.TimeOfDay arrival_time = 8;
      */
     arrivalTime?: TimeOfDay;
     /**
-     * The duration of this flight. Can also be calculated from the departure
-     * and arrival times.
+     * The duration of this flight. This field is purely provided for convenience and can also
+     * be calculated from the departure and arrival times.
      *
      * @generated from protobuf field: google.protobuf.Duration duration = 9;
      */
@@ -151,7 +168,7 @@ export interface Route {
      */
     aircraftModels: AircraftModel[];
     /**
-     * Whether this route is archived.
+     * Whether this route is archived. An archived route cannot be booked by pilots.
      *
      * @generated from protobuf field: bool archived = 16;
      */

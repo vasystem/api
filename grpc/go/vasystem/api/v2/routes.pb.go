@@ -21,22 +21,28 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// The ListRoutesRequest message defines the request parameters for the
+// ListRoutes method.
 type ListRoutesRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	// Filter by airline.
+	// Example: `01gevxx0g090m0a78xmvhtfre4`
 	AirlineId string `protobuf:"bytes,1,opt,name=airline_id,json=airlineId,proto3" json:"airline_id,omitempty"`
 	// Filter by departure airport.
+	// Example: `KJFK`
 	DepartureIcao string `protobuf:"bytes,2,opt,name=departure_icao,json=departureIcao,proto3" json:"departure_icao,omitempty"`
 	// Filter by arrival airport.
+	// Example: `YSSY`
 	ArrivalIcao string `protobuf:"bytes,3,opt,name=arrival_icao,json=arrivalIcao,proto3" json:"arrival_icao,omitempty"`
 	// Filter by the flight number. This does not include the airline code.
+	// Example: `1234`
 	IcaoFlightNumber string `protobuf:"bytes,4,opt,name=icao_flight_number,json=icaoFlightNumber,proto3" json:"icao_flight_number,omitempty"`
 	// Whether to include archived routes. Defaults to false.
 	IncludeArchived bool `protobuf:"varint,5,opt,name=include_archived,json=includeArchived,proto3" json:"include_archived,omitempty"`
-	// Default is 100.
+	// The maximum number of results to return. Defaults to 100. Maximum is 1000.
 	PageSize uint64 `protobuf:"varint,14,opt,name=page_size,json=pageSize,proto3" json:"page_size,omitempty"`
 	// The next_page_token value returned from a previous List request, if any.
 	// If used, all other parameters must match the call that provided the token.
@@ -124,15 +130,20 @@ func (x *ListRoutesRequest) GetPageToken() string {
 	return ""
 }
 
+// The ListRoutesResponse message defines the response parameters for the
+// ListRoutes method.
 type ListRoutesResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// The list of routes.
 	Routes []*Route `protobuf:"bytes,1,rep,name=routes,proto3" json:"routes,omitempty"`
 	// The next_page_token value to include in a subsequent List request. When
 	// paginating, all other parameters provided to List must match the call that
 	// provided the page token.
+	// When this field is empty, there are no more results. However, if the
+	// field is non-empty, there may not be any more results on the next page.
 	NextPageToken string `protobuf:"bytes,2,opt,name=next_page_token,json=nextPageToken,proto3" json:"next_page_token,omitempty"`
 }
 
@@ -182,6 +193,7 @@ func (x *ListRoutesResponse) GetNextPageToken() string {
 	return ""
 }
 
+// A Route represents a regularly scheduled flight between two airports.
 type Route struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -192,23 +204,24 @@ type Route struct {
 	// The airline that operates this route.
 	Airline *Airline `protobuf:"bytes,2,opt,name=airline,proto3" json:"airline,omitempty"`
 	// This does not include the airline code.
+	// Example: `1234`
 	IcaoFlightNumber string `protobuf:"bytes,3,opt,name=icao_flight_number,json=icaoFlightNumber,proto3" json:"icao_flight_number,omitempty"`
 	// The departure airport.
 	Departure *Airport `protobuf:"bytes,5,opt,name=departure,proto3" json:"departure,omitempty"`
 	// The arrival airport.
 	Arrival *Airport `protobuf:"bytes,6,opt,name=arrival,proto3" json:"arrival,omitempty"`
-	// Departure time is in UTC.
+	// The departure time is in UTC.
 	DepartureTime *TimeOfDay `protobuf:"bytes,7,opt,name=departure_time,json=departureTime,proto3" json:"departure_time,omitempty"`
-	// Arrival time is in UTC.
+	// The arrival time is in UTC.
 	ArrivalTime *TimeOfDay `protobuf:"bytes,8,opt,name=arrival_time,json=arrivalTime,proto3" json:"arrival_time,omitempty"`
-	// The duration of this flight. Can also be calculated from the departure
-	// and arrival times.
+	// The duration of this flight. This field is purely provided for convenience and can also
+	// be calculated from the departure and arrival times.
 	Duration *durationpb.Duration `protobuf:"bytes,9,opt,name=duration,proto3" json:"duration,omitempty"`
 	// The days of the week that this flight operates.
 	DaysFlown []DayOfWeek `protobuf:"varint,10,rep,packed,name=days_flown,json=daysFlown,proto3,enum=vasystem.api.v2.DayOfWeek" json:"days_flown,omitempty"`
 	// The aircraft models that operate this route.
 	AircraftModels []*AircraftModel `protobuf:"bytes,11,rep,name=aircraft_models,json=aircraftModels,proto3" json:"aircraft_models,omitempty"`
-	// Whether this route is archived.
+	// Whether this route is archived. An archived route cannot be booked by pilots.
 	Archived bool `protobuf:"varint,16,opt,name=archived,proto3" json:"archived,omitempty"`
 }
 

@@ -8,11 +8,19 @@ public interface AircraftModelOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Unique identifier of the aircraft model.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
+   * <pre>
+   * Unique identifier of the aircraft model.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -20,41 +28,75 @@ public interface AircraftModelOrBuilder extends
       getIdBytes();
 
   /**
+   * <pre>
+   * The type of aircraft.
+   * </pre>
+   *
    * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
    * @return Whether the aircraftType field is set.
    */
   boolean hasAircraftType();
   /**
+   * <pre>
+   * The type of aircraft.
+   * </pre>
+   *
    * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
    * @return The aircraftType.
    */
   dev.vasystem.api.v2.AircraftType getAircraftType();
   /**
+   * <pre>
+   * The type of aircraft.
+   * </pre>
+   *
    * <code>.vasystem.api.v2.AircraftType aircraft_type = 2 [json_name = "aircraftType"];</code>
    */
   dev.vasystem.api.v2.AircraftTypeOrBuilder getAircraftTypeOrBuilder();
 
   /**
+   * <pre>
+   * The airline that operates the aircraft model.
+   * </pre>
+   *
    * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
    * @return Whether the airline field is set.
    */
   boolean hasAirline();
   /**
+   * <pre>
+   * The airline that operates the aircraft model.
+   * </pre>
+   *
    * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
    * @return The airline.
    */
   dev.vasystem.api.v2.Airline getAirline();
   /**
+   * <pre>
+   * The airline that operates the aircraft model.
+   * </pre>
+   *
    * <code>.vasystem.api.v2.Airline airline = 3 [json_name = "airline"];</code>
    */
   dev.vasystem.api.v2.AirlineOrBuilder getAirlineOrBuilder();
 
   /**
+   * <pre>
+   * The name of the aircraft model.
+   * Example: `	Boeing 737-824(WL)`
+   * </pre>
+   *
    * <code>string name = 4 [json_name = "name"];</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
+   * <pre>
+   * The name of the aircraft model.
+   * Example: `	Boeing 737-824(WL)`
+   * </pre>
+   *
    * <code>string name = 4 [json_name = "name"];</code>
    * @return The bytes for name.
    */

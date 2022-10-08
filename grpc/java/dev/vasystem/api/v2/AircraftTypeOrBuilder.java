@@ -8,11 +8,19 @@ public interface AircraftTypeOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Unique identifier of the aircraft type.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
+   * <pre>
+   * Unique identifier of the aircraft type.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -21,7 +29,8 @@ public interface AircraftTypeOrBuilder extends
 
   /**
    * <pre>
-   * The ICAO aircraft type code.
+   * The ICAO aircraft type code. Unique.
+   * Example: `B738`
    * </pre>
    *
    * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -30,7 +39,8 @@ public interface AircraftTypeOrBuilder extends
   java.lang.String getIcaoCode();
   /**
    * <pre>
-   * The ICAO aircraft type code.
+   * The ICAO aircraft type code. Unique.
+   * Example: `B738`
    * </pre>
    *
    * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -42,6 +52,7 @@ public interface AircraftTypeOrBuilder extends
   /**
    * <pre>
    * The IATA aircraft type code.
+   * Example: `738`
    * </pre>
    *
    * <code>string iata_code = 3 [json_name = "iataCode"];</code>
@@ -51,6 +62,7 @@ public interface AircraftTypeOrBuilder extends
   /**
    * <pre>
    * The IATA aircraft type code.
+   * Example: `738`
    * </pre>
    *
    * <code>string iata_code = 3 [json_name = "iataCode"];</code>
@@ -60,11 +72,21 @@ public interface AircraftTypeOrBuilder extends
       getIataCodeBytes();
 
   /**
+   * <pre>
+   * The name of the aircraft type.
+   * Example: `Boeing 737-800`
+   * </pre>
+   *
    * <code>string name = 4 [json_name = "name"];</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
+   * <pre>
+   * The name of the aircraft type.
+   * Example: `Boeing 737-800`
+   * </pre>
+   *
    * <code>string name = 4 [json_name = "name"];</code>
    * @return The bytes for name.
    */

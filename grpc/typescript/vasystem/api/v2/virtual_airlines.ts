@@ -15,11 +15,17 @@ import { reflectionMergePartial } from "@protobuf-ts/runtime";
 import { MESSAGE_TYPE } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
 /**
+ * The GetVirtualAirlineRequest message contains the request parameters for the
+ * GetVirtualAirline method.
+ *
  * @generated from protobuf message vasystem.api.v2.GetVirtualAirlineRequest
  */
 export interface GetVirtualAirlineRequest {
 }
 /**
+ * The GetVirtualAirlineResponse message contains the response parameters for the
+ * GetVirtualAirline method.
+ *
  * @generated from protobuf message vasystem.api.v2.GetVirtualAirlineResponse
  */
 export interface GetVirtualAirlineResponse {
@@ -29,16 +35,23 @@ export interface GetVirtualAirlineResponse {
     virtualAirline?: VirtualAirline;
 }
 /**
+ * A VirtualAirline resource represents a virtual airline. All methods in the API
+ * operate on a single virtual airline.
+ *
  * @generated from protobuf message vasystem.api.v2.VirtualAirline
  */
 export interface VirtualAirline {
     /**
      * The name of the virtual airline.
+     * Example: `Star Alliance Virtual`
      *
      * @generated from protobuf field: string name = 1;
      */
     name: string;
     /**
+     * The main website URL of the virtual airline.
+     * Example: `https://staralliancevirtual.org`
+     *
      * @generated from protobuf field: string url = 2;
      */
     url: string;

@@ -6,7 +6,8 @@ from vasystem.api.v2 import routes_pb2 as vasystem_dot_api_dot_v2_dot_routes__pb
 
 
 class RoutesServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """Retrieve route information.
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -22,10 +23,11 @@ class RoutesServiceStub(object):
 
 
 class RoutesServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """Retrieve route information.
+    """
 
     def ListRoutes(self, request, context):
-        """List routes
+        """List routes. This is a paginated endpoint.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -47,7 +49,8 @@ def add_RoutesServiceServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class RoutesService(object):
-    """Missing associated documentation comment in .proto file."""
+    """Retrieve route information.
+    """
 
     @staticmethod
     def ListRoutes(request,

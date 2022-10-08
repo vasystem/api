@@ -4,6 +4,11 @@
 package dev.vasystem.api.v2;
 
 /**
+ * <pre>
+ * The ListRoutesRequest message defines the request parameters for the
+ * ListRoutes method.
+ * </pre>
+ *
  * Protobuf type {@code vasystem.api.v2.ListRoutesRequest}
  */
 public final class ListRoutesRequest extends
@@ -53,6 +58,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Filter by airline.
+   * Example: `01gevxx0g090m0a78xmvhtfre4`
    * </pre>
    *
    * <code>string airline_id = 1 [json_name = "airlineId"];</code>
@@ -74,6 +80,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Filter by airline.
+   * Example: `01gevxx0g090m0a78xmvhtfre4`
    * </pre>
    *
    * <code>string airline_id = 1 [json_name = "airlineId"];</code>
@@ -99,6 +106,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Filter by departure airport.
+   * Example: `KJFK`
    * </pre>
    *
    * <code>string departure_icao = 2 [json_name = "departureIcao"];</code>
@@ -120,6 +128,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Filter by departure airport.
+   * Example: `KJFK`
    * </pre>
    *
    * <code>string departure_icao = 2 [json_name = "departureIcao"];</code>
@@ -145,6 +154,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Filter by arrival airport.
+   * Example: `YSSY`
    * </pre>
    *
    * <code>string arrival_icao = 3 [json_name = "arrivalIcao"];</code>
@@ -166,6 +176,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Filter by arrival airport.
+   * Example: `YSSY`
    * </pre>
    *
    * <code>string arrival_icao = 3 [json_name = "arrivalIcao"];</code>
@@ -191,6 +202,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Filter by the flight number. This does not include the airline code.
+   * Example: `1234`
    * </pre>
    *
    * <code>string icao_flight_number = 4 [json_name = "icaoFlightNumber"];</code>
@@ -212,6 +224,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Filter by the flight number. This does not include the airline code.
+   * Example: `1234`
    * </pre>
    *
    * <code>string icao_flight_number = 4 [json_name = "icaoFlightNumber"];</code>
@@ -251,7 +264,7 @@ private static final long serialVersionUID = 0L;
   private long pageSize_;
   /**
    * <pre>
-   * Default is 100.
+   * The maximum number of results to return. Defaults to 100. Maximum is 1000.
    * </pre>
    *
    * <code>uint64 page_size = 14 [json_name = "pageSize"];</code>
@@ -529,6 +542,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * The ListRoutesRequest message defines the request parameters for the
+   * ListRoutes method.
+   * </pre>
+   *
    * Protobuf type {@code vasystem.api.v2.ListRoutesRequest}
    */
   public static final class Builder extends
@@ -763,6 +781,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by airline.
+     * Example: `01gevxx0g090m0a78xmvhtfre4`
      * </pre>
      *
      * <code>string airline_id = 1 [json_name = "airlineId"];</code>
@@ -783,6 +802,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by airline.
+     * Example: `01gevxx0g090m0a78xmvhtfre4`
      * </pre>
      *
      * <code>string airline_id = 1 [json_name = "airlineId"];</code>
@@ -804,6 +824,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by airline.
+     * Example: `01gevxx0g090m0a78xmvhtfre4`
      * </pre>
      *
      * <code>string airline_id = 1 [json_name = "airlineId"];</code>
@@ -823,6 +844,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by airline.
+     * Example: `01gevxx0g090m0a78xmvhtfre4`
      * </pre>
      *
      * <code>string airline_id = 1 [json_name = "airlineId"];</code>
@@ -837,6 +859,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by airline.
+     * Example: `01gevxx0g090m0a78xmvhtfre4`
      * </pre>
      *
      * <code>string airline_id = 1 [json_name = "airlineId"];</code>
@@ -859,6 +882,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by departure airport.
+     * Example: `KJFK`
      * </pre>
      *
      * <code>string departure_icao = 2 [json_name = "departureIcao"];</code>
@@ -879,6 +903,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by departure airport.
+     * Example: `KJFK`
      * </pre>
      *
      * <code>string departure_icao = 2 [json_name = "departureIcao"];</code>
@@ -900,6 +925,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by departure airport.
+     * Example: `KJFK`
      * </pre>
      *
      * <code>string departure_icao = 2 [json_name = "departureIcao"];</code>
@@ -919,6 +945,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by departure airport.
+     * Example: `KJFK`
      * </pre>
      *
      * <code>string departure_icao = 2 [json_name = "departureIcao"];</code>
@@ -933,6 +960,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by departure airport.
+     * Example: `KJFK`
      * </pre>
      *
      * <code>string departure_icao = 2 [json_name = "departureIcao"];</code>
@@ -955,6 +983,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by arrival airport.
+     * Example: `YSSY`
      * </pre>
      *
      * <code>string arrival_icao = 3 [json_name = "arrivalIcao"];</code>
@@ -975,6 +1004,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by arrival airport.
+     * Example: `YSSY`
      * </pre>
      *
      * <code>string arrival_icao = 3 [json_name = "arrivalIcao"];</code>
@@ -996,6 +1026,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by arrival airport.
+     * Example: `YSSY`
      * </pre>
      *
      * <code>string arrival_icao = 3 [json_name = "arrivalIcao"];</code>
@@ -1015,6 +1046,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by arrival airport.
+     * Example: `YSSY`
      * </pre>
      *
      * <code>string arrival_icao = 3 [json_name = "arrivalIcao"];</code>
@@ -1029,6 +1061,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by arrival airport.
+     * Example: `YSSY`
      * </pre>
      *
      * <code>string arrival_icao = 3 [json_name = "arrivalIcao"];</code>
@@ -1051,6 +1084,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by the flight number. This does not include the airline code.
+     * Example: `1234`
      * </pre>
      *
      * <code>string icao_flight_number = 4 [json_name = "icaoFlightNumber"];</code>
@@ -1071,6 +1105,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by the flight number. This does not include the airline code.
+     * Example: `1234`
      * </pre>
      *
      * <code>string icao_flight_number = 4 [json_name = "icaoFlightNumber"];</code>
@@ -1092,6 +1127,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by the flight number. This does not include the airline code.
+     * Example: `1234`
      * </pre>
      *
      * <code>string icao_flight_number = 4 [json_name = "icaoFlightNumber"];</code>
@@ -1111,6 +1147,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by the flight number. This does not include the airline code.
+     * Example: `1234`
      * </pre>
      *
      * <code>string icao_flight_number = 4 [json_name = "icaoFlightNumber"];</code>
@@ -1125,6 +1162,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Filter by the flight number. This does not include the airline code.
+     * Example: `1234`
      * </pre>
      *
      * <code>string icao_flight_number = 4 [json_name = "icaoFlightNumber"];</code>
@@ -1189,7 +1227,7 @@ private static final long serialVersionUID = 0L;
     private long pageSize_ ;
     /**
      * <pre>
-     * Default is 100.
+     * The maximum number of results to return. Defaults to 100. Maximum is 1000.
      * </pre>
      *
      * <code>uint64 page_size = 14 [json_name = "pageSize"];</code>
@@ -1201,7 +1239,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Default is 100.
+     * The maximum number of results to return. Defaults to 100. Maximum is 1000.
      * </pre>
      *
      * <code>uint64 page_size = 14 [json_name = "pageSize"];</code>
@@ -1216,7 +1254,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Default is 100.
+     * The maximum number of results to return. Defaults to 100. Maximum is 1000.
      * </pre>
      *
      * <code>uint64 page_size = 14 [json_name = "pageSize"];</code>

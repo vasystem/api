@@ -70,6 +70,10 @@ namespace Vasystem.Api.V2 {
 
   }
   #region Messages
+  /// <summary>
+  /// The ListRoutesRequest message defines the request parameters for the
+  /// ListRoutes method.
+  /// </summary>
   public sealed partial class ListRoutesRequest : pb::IMessage<ListRoutesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -125,6 +129,7 @@ namespace Vasystem.Api.V2 {
     private string airlineId_ = "";
     /// <summary>
     /// Filter by airline.
+    /// Example: `01gevxx0g090m0a78xmvhtfre4`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -140,6 +145,7 @@ namespace Vasystem.Api.V2 {
     private string departureIcao_ = "";
     /// <summary>
     /// Filter by departure airport.
+    /// Example: `KJFK`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -155,6 +161,7 @@ namespace Vasystem.Api.V2 {
     private string arrivalIcao_ = "";
     /// <summary>
     /// Filter by arrival airport.
+    /// Example: `YSSY`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -170,6 +177,7 @@ namespace Vasystem.Api.V2 {
     private string icaoFlightNumber_ = "";
     /// <summary>
     /// Filter by the flight number. This does not include the airline code.
+    /// Example: `1234`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -199,7 +207,7 @@ namespace Vasystem.Api.V2 {
     public const int PageSizeFieldNumber = 14;
     private ulong pageSize_;
     /// <summary>
-    /// Default is 100.
+    /// The maximum number of results to return. Defaults to 100. Maximum is 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -503,6 +511,10 @@ namespace Vasystem.Api.V2 {
 
   }
 
+  /// <summary>
+  /// The ListRoutesResponse message defines the response parameters for the
+  /// ListRoutes method.
+  /// </summary>
   public sealed partial class ListRoutesResponse : pb::IMessage<ListRoutesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -553,6 +565,9 @@ namespace Vasystem.Api.V2 {
     private static readonly pb::FieldCodec<global::Vasystem.Api.V2.Route> _repeated_routes_codec
         = pb::FieldCodec.ForMessage(10, global::Vasystem.Api.V2.Route.Parser);
     private readonly pbc::RepeatedField<global::Vasystem.Api.V2.Route> routes_ = new pbc::RepeatedField<global::Vasystem.Api.V2.Route>();
+    /// <summary>
+    /// The list of routes.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Vasystem.Api.V2.Route> Routes {
@@ -566,6 +581,8 @@ namespace Vasystem.Api.V2 {
     /// The next_page_token value to include in a subsequent List request. When
     /// paginating, all other parameters provided to List must match the call that
     /// provided the page token.
+    /// When this field is empty, there are no more results. However, if the
+    /// field is non-empty, there may not be any more results on the next page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -723,6 +740,9 @@ namespace Vasystem.Api.V2 {
 
   }
 
+  /// <summary>
+  /// A Route represents a regularly scheduled flight between two airports.
+  /// </summary>
   public sealed partial class Route : pb::IMessage<Route>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -812,6 +832,7 @@ namespace Vasystem.Api.V2 {
     private string icaoFlightNumber_ = "";
     /// <summary>
     /// This does not include the airline code.
+    /// Example: `1234`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -856,7 +877,7 @@ namespace Vasystem.Api.V2 {
     public const int DepartureTimeFieldNumber = 7;
     private global::Vasystem.Api.V2.TimeOfDay departureTime_;
     /// <summary>
-    /// Departure time is in UTC.
+    /// The departure time is in UTC.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -871,7 +892,7 @@ namespace Vasystem.Api.V2 {
     public const int ArrivalTimeFieldNumber = 8;
     private global::Vasystem.Api.V2.TimeOfDay arrivalTime_;
     /// <summary>
-    /// Arrival time is in UTC.
+    /// The arrival time is in UTC.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -886,8 +907,8 @@ namespace Vasystem.Api.V2 {
     public const int DurationFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Duration duration_;
     /// <summary>
-    /// The duration of this flight. Can also be calculated from the departure
-    /// and arrival times.
+    /// The duration of this flight. This field is purely provided for convenience and can also
+    /// be calculated from the departure and arrival times.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -930,7 +951,7 @@ namespace Vasystem.Api.V2 {
     public const int ArchivedFieldNumber = 16;
     private bool archived_;
     /// <summary>
-    /// Whether this route is archived.
+    /// Whether this route is archived. An archived route cannot be booked by pilots.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

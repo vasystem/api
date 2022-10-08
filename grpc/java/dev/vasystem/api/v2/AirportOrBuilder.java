@@ -8,11 +8,19 @@ public interface AirportOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * The unique identifier of the airport.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
+   * <pre>
+   * The unique identifier of the airport.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -20,11 +28,19 @@ public interface AirportOrBuilder extends
       getIdBytes();
 
   /**
+   * <pre>
+   * The ICAO airport identifier. Unique.
+   * </pre>
+   *
    * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
    * @return The icaoCode.
    */
   java.lang.String getIcaoCode();
   /**
+   * <pre>
+   * The ICAO airport identifier. Unique.
+   * </pre>
+   *
    * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
    * @return The bytes for icaoCode.
    */
@@ -32,11 +48,19 @@ public interface AirportOrBuilder extends
       getIcaoCodeBytes();
 
   /**
+   * <pre>
+   * The IATA airport identifier. This field is not unique.
+   * </pre>
+   *
    * <code>string iata_code = 3 [json_name = "iataCode"];</code>
    * @return The iataCode.
    */
   java.lang.String getIataCode();
   /**
+   * <pre>
+   * The IATA airport identifier. This field is not unique.
+   * </pre>
+   *
    * <code>string iata_code = 3 [json_name = "iataCode"];</code>
    * @return The bytes for iataCode.
    */

@@ -20,6 +20,8 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// The ListAirlinesRequest message defines the request parameters for the
+// ListAirlines method.
 type ListAirlinesRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -58,6 +60,8 @@ func (*ListAirlinesRequest) Descriptor() ([]byte, []int) {
 	return file_vasystem_api_v2_airlines_proto_rawDescGZIP(), []int{0}
 }
 
+// The ListAirlinesResponse message defines the response parameters for the
+// ListAirlines method.
 type ListAirlinesResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -105,18 +109,35 @@ func (x *ListAirlinesResponse) GetAirlines() []*Airline {
 	return nil
 }
 
+// An Airline resource represents an airline.
 type Airline struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// Unique identifier for the airline.
 	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	// The ICAO code is the unique identifier of the airline.
-	IcaoCode        string `protobuf:"bytes,2,opt,name=icao_code,json=icaoCode,proto3" json:"icao_code,omitempty"`
-	IataCode        string `protobuf:"bytes,3,opt,name=iata_code,json=iataCode,proto3" json:"iata_code,omitempty"`
+	// The ICAO airline code. Unique.
+	// Example: `UAL`
+	IcaoCode string `protobuf:"bytes,2,opt,name=icao_code,json=icaoCode,proto3" json:"icao_code,omitempty"`
+	// The IATA airline code. This field is not unique.
+	// Example: `UA`
+	IataCode string `protobuf:"bytes,3,opt,name=iata_code,json=iataCode,proto3" json:"iata_code,omitempty"`
+	// The ICAO airline display code. This is the code that is displayed to
+	// users and is usually the same as the ICAO code. However, some airlines
+	// have different display codes when they are a subsidiary of another airline,
+	// but use the same ICAO code as their parent company. As such, this field
+	// may not be unique.
+	// Example: `UAL`
 	DisplayIcaoCode string `protobuf:"bytes,4,opt,name=display_icao_code,json=displayIcaoCode,proto3" json:"display_icao_code,omitempty"`
+	// The IATA airline display code. This is the code that is displayed to
+	// users and is usually the same as the IATA code. Currently, this will
+	// always be the same as the IATA code.
+	// Example: `UA`
 	DisplayIataCode string `protobuf:"bytes,5,opt,name=display_iata_code,json=displayIataCode,proto3" json:"display_iata_code,omitempty"`
-	Name            string `protobuf:"bytes,6,opt,name=name,proto3" json:"name,omitempty"`
+	// The airline name.
+	// Example: `United Airlines`
+	Name string `protobuf:"bytes,6,opt,name=name,proto3" json:"name,omitempty"`
 }
 
 func (x *Airline) Reset() {

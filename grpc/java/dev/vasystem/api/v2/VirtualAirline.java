@@ -4,6 +4,11 @@
 package dev.vasystem.api.v2;
 
 /**
+ * <pre>
+ * A VirtualAirline resource represents a virtual airline. All methods in the API
+ * operate on a single virtual airline.
+ * </pre>
+ *
  * Protobuf type {@code vasystem.api.v2.VirtualAirline}
  */
 public final class VirtualAirline extends
@@ -50,6 +55,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the virtual airline.
+   * Example: `Star Alliance Virtual`
    * </pre>
    *
    * <code>string name = 1 [json_name = "name"];</code>
@@ -71,6 +77,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the virtual airline.
+   * Example: `Star Alliance Virtual`
    * </pre>
    *
    * <code>string name = 1 [json_name = "name"];</code>
@@ -94,6 +101,11 @@ private static final long serialVersionUID = 0L;
   public static final int URL_FIELD_NUMBER = 2;
   private volatile java.lang.Object url_;
   /**
+   * <pre>
+   * The main website URL of the virtual airline.
+   * Example: `https://staralliancevirtual.org`
+   * </pre>
+   *
    * <code>string url = 2 [json_name = "url"];</code>
    * @return The url.
    */
@@ -111,6 +123,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The main website URL of the virtual airline.
+   * Example: `https://staralliancevirtual.org`
+   * </pre>
+   *
    * <code>string url = 2 [json_name = "url"];</code>
    * @return The bytes for url.
    */
@@ -294,6 +311,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * A VirtualAirline resource represents a virtual airline. All methods in the API
+   * operate on a single virtual airline.
+   * </pre>
+   *
    * Protobuf type {@code vasystem.api.v2.VirtualAirline}
    */
   public static final class Builder extends
@@ -470,6 +492,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the virtual airline.
+     * Example: `Star Alliance Virtual`
      * </pre>
      *
      * <code>string name = 1 [json_name = "name"];</code>
@@ -490,6 +513,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the virtual airline.
+     * Example: `Star Alliance Virtual`
      * </pre>
      *
      * <code>string name = 1 [json_name = "name"];</code>
@@ -511,6 +535,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the virtual airline.
+     * Example: `Star Alliance Virtual`
      * </pre>
      *
      * <code>string name = 1 [json_name = "name"];</code>
@@ -530,6 +555,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the virtual airline.
+     * Example: `Star Alliance Virtual`
      * </pre>
      *
      * <code>string name = 1 [json_name = "name"];</code>
@@ -544,6 +570,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the virtual airline.
+     * Example: `Star Alliance Virtual`
      * </pre>
      *
      * <code>string name = 1 [json_name = "name"];</code>
@@ -564,6 +591,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object url_ = "";
     /**
+     * <pre>
+     * The main website URL of the virtual airline.
+     * Example: `https://staralliancevirtual.org`
+     * </pre>
+     *
      * <code>string url = 2 [json_name = "url"];</code>
      * @return The url.
      */
@@ -580,6 +612,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The main website URL of the virtual airline.
+     * Example: `https://staralliancevirtual.org`
+     * </pre>
+     *
      * <code>string url = 2 [json_name = "url"];</code>
      * @return The bytes for url.
      */
@@ -597,6 +634,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The main website URL of the virtual airline.
+     * Example: `https://staralliancevirtual.org`
+     * </pre>
+     *
      * <code>string url = 2 [json_name = "url"];</code>
      * @param value The url to set.
      * @return This builder for chaining.
@@ -612,6 +654,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The main website URL of the virtual airline.
+     * Example: `https://staralliancevirtual.org`
+     * </pre>
+     *
      * <code>string url = 2 [json_name = "url"];</code>
      * @return This builder for chaining.
      */
@@ -622,6 +669,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The main website URL of the virtual airline.
+     * Example: `https://staralliancevirtual.org`
+     * </pre>
+     *
      * <code>string url = 2 [json_name = "url"];</code>
      * @param value The bytes for url to set.
      * @return This builder for chaining.

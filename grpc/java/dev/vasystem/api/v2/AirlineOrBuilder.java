@@ -8,11 +8,19 @@ public interface AirlineOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Unique identifier for the airline.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
   /**
+   * <pre>
+   * Unique identifier for the airline.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -21,7 +29,8 @@ public interface AirlineOrBuilder extends
 
   /**
    * <pre>
-   * The ICAO code is the unique identifier of the airline.
+   * The ICAO airline code. Unique.
+   * Example: `UAL`
    * </pre>
    *
    * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -30,7 +39,8 @@ public interface AirlineOrBuilder extends
   java.lang.String getIcaoCode();
   /**
    * <pre>
-   * The ICAO code is the unique identifier of the airline.
+   * The ICAO airline code. Unique.
+   * Example: `UAL`
    * </pre>
    *
    * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -40,11 +50,21 @@ public interface AirlineOrBuilder extends
       getIcaoCodeBytes();
 
   /**
+   * <pre>
+   * The IATA airline code. This field is not unique.
+   * Example: `UA`
+   * </pre>
+   *
    * <code>string iata_code = 3 [json_name = "iataCode"];</code>
    * @return The iataCode.
    */
   java.lang.String getIataCode();
   /**
+   * <pre>
+   * The IATA airline code. This field is not unique.
+   * Example: `UA`
+   * </pre>
+   *
    * <code>string iata_code = 3 [json_name = "iataCode"];</code>
    * @return The bytes for iataCode.
    */
@@ -52,11 +72,29 @@ public interface AirlineOrBuilder extends
       getIataCodeBytes();
 
   /**
+   * <pre>
+   * The ICAO airline display code. This is the code that is displayed to
+   * users and is usually the same as the ICAO code. However, some airlines
+   * have different display codes when they are a subsidiary of another airline,
+   * but use the same ICAO code as their parent company. As such, this field
+   * may not be unique.
+   * Example: `UAL`
+   * </pre>
+   *
    * <code>string display_icao_code = 4 [json_name = "displayIcaoCode"];</code>
    * @return The displayIcaoCode.
    */
   java.lang.String getDisplayIcaoCode();
   /**
+   * <pre>
+   * The ICAO airline display code. This is the code that is displayed to
+   * users and is usually the same as the ICAO code. However, some airlines
+   * have different display codes when they are a subsidiary of another airline,
+   * but use the same ICAO code as their parent company. As such, this field
+   * may not be unique.
+   * Example: `UAL`
+   * </pre>
+   *
    * <code>string display_icao_code = 4 [json_name = "displayIcaoCode"];</code>
    * @return The bytes for displayIcaoCode.
    */
@@ -64,11 +102,25 @@ public interface AirlineOrBuilder extends
       getDisplayIcaoCodeBytes();
 
   /**
+   * <pre>
+   * The IATA airline display code. This is the code that is displayed to
+   * users and is usually the same as the IATA code. Currently, this will
+   * always be the same as the IATA code.
+   * Example: `UA`
+   * </pre>
+   *
    * <code>string display_iata_code = 5 [json_name = "displayIataCode"];</code>
    * @return The displayIataCode.
    */
   java.lang.String getDisplayIataCode();
   /**
+   * <pre>
+   * The IATA airline display code. This is the code that is displayed to
+   * users and is usually the same as the IATA code. Currently, this will
+   * always be the same as the IATA code.
+   * Example: `UA`
+   * </pre>
+   *
    * <code>string display_iata_code = 5 [json_name = "displayIataCode"];</code>
    * @return The bytes for displayIataCode.
    */
@@ -76,11 +128,21 @@ public interface AirlineOrBuilder extends
       getDisplayIataCodeBytes();
 
   /**
+   * <pre>
+   * The airline name.
+   * Example: `United Airlines`
+   * </pre>
+   *
    * <code>string name = 6 [json_name = "name"];</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
+   * <pre>
+   * The airline name.
+   * Example: `United Airlines`
+   * </pre>
+   *
    * <code>string name = 6 [json_name = "name"];</code>
    * @return The bytes for name.
    */

@@ -20,6 +20,8 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// The GetVirtualAirlineRequest message contains the request parameters for the
+// GetVirtualAirline method.
 type GetVirtualAirlineRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -58,6 +60,8 @@ func (*GetVirtualAirlineRequest) Descriptor() ([]byte, []int) {
 	return file_vasystem_api_v2_virtual_airlines_proto_rawDescGZIP(), []int{0}
 }
 
+// The GetVirtualAirlineResponse message contains the response parameters for the
+// GetVirtualAirline method.
 type GetVirtualAirlineResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -105,14 +109,19 @@ func (x *GetVirtualAirlineResponse) GetVirtualAirline() *VirtualAirline {
 	return nil
 }
 
+// A VirtualAirline resource represents a virtual airline. All methods in the API
+// operate on a single virtual airline.
 type VirtualAirline struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	// The name of the virtual airline.
+	// Example: `Star Alliance Virtual`
 	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Url  string `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
+	// The main website URL of the virtual airline.
+	// Example: `https://staralliancevirtual.org`
+	Url string `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`
 }
 
 func (x *VirtualAirline) Reset() {

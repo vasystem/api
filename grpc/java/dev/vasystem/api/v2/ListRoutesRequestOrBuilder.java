@@ -10,6 +10,7 @@ public interface ListRoutesRequestOrBuilder extends
   /**
    * <pre>
    * Filter by airline.
+   * Example: `01gevxx0g090m0a78xmvhtfre4`
    * </pre>
    *
    * <code>string airline_id = 1 [json_name = "airlineId"];</code>
@@ -19,6 +20,7 @@ public interface ListRoutesRequestOrBuilder extends
   /**
    * <pre>
    * Filter by airline.
+   * Example: `01gevxx0g090m0a78xmvhtfre4`
    * </pre>
    *
    * <code>string airline_id = 1 [json_name = "airlineId"];</code>
@@ -30,6 +32,7 @@ public interface ListRoutesRequestOrBuilder extends
   /**
    * <pre>
    * Filter by departure airport.
+   * Example: `KJFK`
    * </pre>
    *
    * <code>string departure_icao = 2 [json_name = "departureIcao"];</code>
@@ -39,6 +42,7 @@ public interface ListRoutesRequestOrBuilder extends
   /**
    * <pre>
    * Filter by departure airport.
+   * Example: `KJFK`
    * </pre>
    *
    * <code>string departure_icao = 2 [json_name = "departureIcao"];</code>
@@ -50,6 +54,7 @@ public interface ListRoutesRequestOrBuilder extends
   /**
    * <pre>
    * Filter by arrival airport.
+   * Example: `YSSY`
    * </pre>
    *
    * <code>string arrival_icao = 3 [json_name = "arrivalIcao"];</code>
@@ -59,6 +64,7 @@ public interface ListRoutesRequestOrBuilder extends
   /**
    * <pre>
    * Filter by arrival airport.
+   * Example: `YSSY`
    * </pre>
    *
    * <code>string arrival_icao = 3 [json_name = "arrivalIcao"];</code>
@@ -70,6 +76,7 @@ public interface ListRoutesRequestOrBuilder extends
   /**
    * <pre>
    * Filter by the flight number. This does not include the airline code.
+   * Example: `1234`
    * </pre>
    *
    * <code>string icao_flight_number = 4 [json_name = "icaoFlightNumber"];</code>
@@ -79,6 +86,7 @@ public interface ListRoutesRequestOrBuilder extends
   /**
    * <pre>
    * Filter by the flight number. This does not include the airline code.
+   * Example: `1234`
    * </pre>
    *
    * <code>string icao_flight_number = 4 [json_name = "icaoFlightNumber"];</code>
@@ -99,7 +107,7 @@ public interface ListRoutesRequestOrBuilder extends
 
   /**
    * <pre>
-   * Default is 100.
+   * The maximum number of results to return. Defaults to 100. Maximum is 1000.
    * </pre>
    *
    * <code>uint64 page_size = 14 [json_name = "pageSize"];</code>

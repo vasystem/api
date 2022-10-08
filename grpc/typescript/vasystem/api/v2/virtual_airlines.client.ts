@@ -12,6 +12,8 @@ import type { GetVirtualAirlineRequest } from "./virtual_airlines";
 import type { UnaryCall } from "@protobuf-ts/runtime-rpc";
 import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
 /**
+ * Retrieve virtual airline information.
+ *
  * @generated from protobuf service vasystem.api.v2.VirtualAirlinesService
  */
 export interface IVirtualAirlinesServiceClient {
@@ -24,6 +26,8 @@ export interface IVirtualAirlinesServiceClient {
     getVirtualAirline(input: GetVirtualAirlineRequest, options?: RpcOptions): UnaryCall<GetVirtualAirlineRequest, GetVirtualAirlineResponse>;
 }
 /**
+ * Retrieve virtual airline information.
+ *
  * @generated from protobuf service vasystem.api.v2.VirtualAirlinesService
  */
 export class VirtualAirlinesServiceClient implements IVirtualAirlinesServiceClient, ServiceInfo {

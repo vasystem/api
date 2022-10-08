@@ -4,6 +4,10 @@
 package dev.vasystem.api.v2;
 
 /**
+ * <pre>
+ * An Airport resource represents an airport.
+ * </pre>
+ *
  * Protobuf type {@code vasystem.api.v2.Airport}
  */
 public final class Airport extends
@@ -49,6 +53,10 @@ private static final long serialVersionUID = 0L;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
+   * <pre>
+   * The unique identifier of the airport.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
@@ -66,6 +74,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The unique identifier of the airport.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -87,6 +99,10 @@ private static final long serialVersionUID = 0L;
   public static final int ICAO_CODE_FIELD_NUMBER = 2;
   private volatile java.lang.Object icaoCode_;
   /**
+   * <pre>
+   * The ICAO airport identifier. Unique.
+   * </pre>
+   *
    * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
    * @return The icaoCode.
    */
@@ -104,6 +120,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The ICAO airport identifier. Unique.
+   * </pre>
+   *
    * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
    * @return The bytes for icaoCode.
    */
@@ -125,6 +145,10 @@ private static final long serialVersionUID = 0L;
   public static final int IATA_CODE_FIELD_NUMBER = 3;
   private volatile java.lang.Object iataCode_;
   /**
+   * <pre>
+   * The IATA airport identifier. This field is not unique.
+   * </pre>
+   *
    * <code>string iata_code = 3 [json_name = "iataCode"];</code>
    * @return The iataCode.
    */
@@ -142,6 +166,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The IATA airport identifier. This field is not unique.
+   * </pre>
+   *
    * <code>string iata_code = 3 [json_name = "iataCode"];</code>
    * @return The bytes for iataCode.
    */
@@ -335,6 +363,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * An Airport resource represents an airport.
+   * </pre>
+   *
    * Protobuf type {@code vasystem.api.v2.Airport}
    */
   public static final class Builder extends
@@ -521,6 +553,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     * The unique identifier of the airport.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -537,6 +573,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The unique identifier of the airport.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -554,6 +594,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The unique identifier of the airport.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -569,6 +613,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier of the airport.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
@@ -579,6 +627,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The unique identifier of the airport.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -597,6 +649,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object icaoCode_ = "";
     /**
+     * <pre>
+     * The ICAO airport identifier. Unique.
+     * </pre>
+     *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
      * @return The icaoCode.
      */
@@ -613,6 +669,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ICAO airport identifier. Unique.
+     * </pre>
+     *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
      * @return The bytes for icaoCode.
      */
@@ -630,6 +690,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The ICAO airport identifier. Unique.
+     * </pre>
+     *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
      * @param value The icaoCode to set.
      * @return This builder for chaining.
@@ -645,6 +709,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ICAO airport identifier. Unique.
+     * </pre>
+     *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
      * @return This builder for chaining.
      */
@@ -655,6 +723,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The ICAO airport identifier. Unique.
+     * </pre>
+     *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
      * @param value The bytes for icaoCode to set.
      * @return This builder for chaining.
@@ -673,6 +745,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object iataCode_ = "";
     /**
+     * <pre>
+     * The IATA airport identifier. This field is not unique.
+     * </pre>
+     *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
      * @return The iataCode.
      */
@@ -689,6 +765,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The IATA airport identifier. This field is not unique.
+     * </pre>
+     *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
      * @return The bytes for iataCode.
      */
@@ -706,6 +786,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The IATA airport identifier. This field is not unique.
+     * </pre>
+     *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
      * @param value The iataCode to set.
      * @return This builder for chaining.
@@ -721,6 +805,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The IATA airport identifier. This field is not unique.
+     * </pre>
+     *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
      * @return This builder for chaining.
      */
@@ -731,6 +819,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The IATA airport identifier. This field is not unique.
+     * </pre>
+     *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
      * @param value The bytes for iataCode to set.
      * @return This builder for chaining.

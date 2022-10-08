@@ -8,6 +8,9 @@
 using grpc = global::Grpc.Core;
 
 namespace Vasystem.Api.V2 {
+  /// <summary>
+  /// Retrieve route information.
+  /// </summary>
   public static partial class RoutesService
   {
     static readonly string __ServiceName = "vasystem.api.v2.RoutesService";
@@ -69,7 +72,7 @@ namespace Vasystem.Api.V2 {
     public abstract partial class RoutesServiceBase
     {
       /// <summary>
-      /// List routes
+      /// List routes. This is a paginated endpoint.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -110,7 +113,7 @@ namespace Vasystem.Api.V2 {
       }
 
       /// <summary>
-      /// List routes
+      /// List routes. This is a paginated endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -123,7 +126,7 @@ namespace Vasystem.Api.V2 {
         return ListRoutes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List routes
+      /// List routes. This is a paginated endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -134,7 +137,7 @@ namespace Vasystem.Api.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListRoutes, null, options, request);
       }
       /// <summary>
-      /// List routes
+      /// List routes. This is a paginated endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -147,7 +150,7 @@ namespace Vasystem.Api.V2 {
         return ListRoutesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List routes
+      /// List routes. This is a paginated endpoint.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

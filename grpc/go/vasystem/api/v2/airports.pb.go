@@ -20,13 +20,17 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// An Airport resource represents an airport.
 type Airport struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id       string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// The unique identifier of the airport.
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// The ICAO airport identifier. Unique.
 	IcaoCode string `protobuf:"bytes,2,opt,name=icao_code,json=icaoCode,proto3" json:"icao_code,omitempty"`
+	// The IATA airport identifier. This field is not unique.
 	IataCode string `protobuf:"bytes,3,opt,name=iata_code,json=iataCode,proto3" json:"iata_code,omitempty"`
 }
 

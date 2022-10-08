@@ -8,6 +8,7 @@ module Vasystem
   module Api
     module V2
       module RoutesService
+        # Retrieve route information.
         class Service
 
           include ::GRPC::GenericService
@@ -16,7 +17,7 @@ module Vasystem
           self.unmarshal_class_method = :decode
           self.service_name = 'vasystem.api.v2.RoutesService'
 
-          # List routes
+          # List routes. This is a paginated endpoint.
           rpc :ListRoutes, ::Vasystem::Api::V2::ListRoutesRequest, ::Vasystem::Api::V2::ListRoutesResponse
         end
 

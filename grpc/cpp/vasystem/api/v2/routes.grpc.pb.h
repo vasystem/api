@@ -29,6 +29,7 @@ namespace vasystem {
 namespace api {
 namespace v2 {
 
+// Retrieve route information.
 class RoutesService final {
  public:
   static constexpr char const* service_full_name() {
@@ -37,7 +38,7 @@ class RoutesService final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    // List routes
+    // List routes. This is a paginated endpoint.
     virtual ::grpc::Status ListRoutes(::grpc::ClientContext* context, const ::vasystem::api::v2::ListRoutesRequest& request, ::vasystem::api::v2::ListRoutesResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vasystem::api::v2::ListRoutesResponse>> AsyncListRoutes(::grpc::ClientContext* context, const ::vasystem::api::v2::ListRoutesRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vasystem::api::v2::ListRoutesResponse>>(AsyncListRoutesRaw(context, request, cq));
@@ -48,7 +49,7 @@ class RoutesService final {
     class async_interface {
      public:
       virtual ~async_interface() {}
-      // List routes
+      // List routes. This is a paginated endpoint.
       virtual void ListRoutes(::grpc::ClientContext* context, const ::vasystem::api::v2::ListRoutesRequest* request, ::vasystem::api::v2::ListRoutesResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void ListRoutes(::grpc::ClientContext* context, const ::vasystem::api::v2::ListRoutesRequest* request, ::vasystem::api::v2::ListRoutesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
@@ -95,7 +96,7 @@ class RoutesService final {
    public:
     Service();
     virtual ~Service();
-    // List routes
+    // List routes. This is a paginated endpoint.
     virtual ::grpc::Status ListRoutes(::grpc::ServerContext* context, const ::vasystem::api::v2::ListRoutesRequest* request, ::vasystem::api::v2::ListRoutesResponse* response);
   };
   template <class BaseClass>

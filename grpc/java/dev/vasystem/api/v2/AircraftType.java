@@ -4,6 +4,10 @@
 package dev.vasystem.api.v2;
 
 /**
+ * <pre>
+ * An AircraftType resource represents a type of aircraft, irrespective of the airline that operates it.
+ * </pre>
+ *
  * Protobuf type {@code vasystem.api.v2.AircraftType}
  */
 public final class AircraftType extends
@@ -50,6 +54,10 @@ private static final long serialVersionUID = 0L;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
+   * <pre>
+   * Unique identifier of the aircraft type.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
@@ -67,6 +75,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Unique identifier of the aircraft type.
+   * </pre>
+   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -89,7 +101,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object icaoCode_;
   /**
    * <pre>
-   * The ICAO aircraft type code.
+   * The ICAO aircraft type code. Unique.
+   * Example: `B738`
    * </pre>
    *
    * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -110,7 +123,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The ICAO aircraft type code.
+   * The ICAO aircraft type code. Unique.
+   * Example: `B738`
    * </pre>
    *
    * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -136,6 +150,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The IATA aircraft type code.
+   * Example: `738`
    * </pre>
    *
    * <code>string iata_code = 3 [json_name = "iataCode"];</code>
@@ -157,6 +172,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The IATA aircraft type code.
+   * Example: `738`
    * </pre>
    *
    * <code>string iata_code = 3 [json_name = "iataCode"];</code>
@@ -180,6 +196,11 @@ private static final long serialVersionUID = 0L;
   public static final int NAME_FIELD_NUMBER = 4;
   private volatile java.lang.Object name_;
   /**
+   * <pre>
+   * The name of the aircraft type.
+   * Example: `Boeing 737-800`
+   * </pre>
+   *
    * <code>string name = 4 [json_name = "name"];</code>
    * @return The name.
    */
@@ -197,6 +218,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * The name of the aircraft type.
+   * Example: `Boeing 737-800`
+   * </pre>
+   *
    * <code>string name = 4 [json_name = "name"];</code>
    * @return The bytes for name.
    */
@@ -400,6 +426,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * An AircraftType resource represents a type of aircraft, irrespective of the airline that operates it.
+   * </pre>
+   *
    * Protobuf type {@code vasystem.api.v2.AircraftType}
    */
   public static final class Builder extends
@@ -598,6 +628,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     * Unique identifier of the aircraft type.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -614,6 +648,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Unique identifier of the aircraft type.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -631,6 +669,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Unique identifier of the aircraft type.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -646,6 +688,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Unique identifier of the aircraft type.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
@@ -656,6 +702,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Unique identifier of the aircraft type.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -675,7 +725,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object icaoCode_ = "";
     /**
      * <pre>
-     * The ICAO aircraft type code.
+     * The ICAO aircraft type code. Unique.
+     * Example: `B738`
      * </pre>
      *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -695,7 +746,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ICAO aircraft type code.
+     * The ICAO aircraft type code. Unique.
+     * Example: `B738`
      * </pre>
      *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -716,7 +768,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ICAO aircraft type code.
+     * The ICAO aircraft type code. Unique.
+     * Example: `B738`
      * </pre>
      *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -735,7 +788,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ICAO aircraft type code.
+     * The ICAO aircraft type code. Unique.
+     * Example: `B738`
      * </pre>
      *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -749,7 +803,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ICAO aircraft type code.
+     * The ICAO aircraft type code. Unique.
+     * Example: `B738`
      * </pre>
      *
      * <code>string icao_code = 2 [json_name = "icaoCode"];</code>
@@ -772,6 +827,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The IATA aircraft type code.
+     * Example: `738`
      * </pre>
      *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
@@ -792,6 +848,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The IATA aircraft type code.
+     * Example: `738`
      * </pre>
      *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
@@ -813,6 +870,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The IATA aircraft type code.
+     * Example: `738`
      * </pre>
      *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
@@ -832,6 +890,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The IATA aircraft type code.
+     * Example: `738`
      * </pre>
      *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
@@ -846,6 +905,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The IATA aircraft type code.
+     * Example: `738`
      * </pre>
      *
      * <code>string iata_code = 3 [json_name = "iataCode"];</code>
@@ -866,6 +926,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     * The name of the aircraft type.
+     * Example: `Boeing 737-800`
+     * </pre>
+     *
      * <code>string name = 4 [json_name = "name"];</code>
      * @return The name.
      */
@@ -882,6 +947,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the aircraft type.
+     * Example: `Boeing 737-800`
+     * </pre>
+     *
      * <code>string name = 4 [json_name = "name"];</code>
      * @return The bytes for name.
      */
@@ -899,6 +969,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * The name of the aircraft type.
+     * Example: `Boeing 737-800`
+     * </pre>
+     *
      * <code>string name = 4 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
@@ -914,6 +989,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the aircraft type.
+     * Example: `Boeing 737-800`
+     * </pre>
+     *
      * <code>string name = 4 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
@@ -924,6 +1004,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * The name of the aircraft type.
+     * Example: `Boeing 737-800`
+     * </pre>
+     *
      * <code>string name = 4 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.

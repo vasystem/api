@@ -2,9 +2,13 @@ syntax = "proto3";
 
 package vasystem.api.v2;
 
+// An Airport resource represents an airport.
 message Airport {
+  // The unique identifier of the airport.
   string id = 1;
 
+  // The ICAO airport identifier. Unique.
   string icao_code = 2;
+  // The IATA airport identifier. This field is not unique.
   string iata_code = 3;
 }

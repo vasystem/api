@@ -6,7 +6,8 @@ from vasystem.api.v2 import virtual_airlines_pb2 as vasystem_dot_api_dot_v2_dot_
 
 
 class VirtualAirlinesServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """Retrieve virtual airline information.
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -22,7 +23,8 @@ class VirtualAirlinesServiceStub(object):
 
 
 class VirtualAirlinesServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """Retrieve virtual airline information.
+    """
 
     def GetVirtualAirline(self, request, context):
         """Get virtual airline information
@@ -48,7 +50,8 @@ def add_VirtualAirlinesServiceServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class VirtualAirlinesService(object):
-    """Missing associated documentation comment in .proto file."""
+    """Retrieve virtual airline information.
+    """
 
     @staticmethod
     def GetVirtualAirline(request,

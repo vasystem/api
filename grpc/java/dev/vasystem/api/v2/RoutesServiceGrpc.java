@@ -3,6 +3,9 @@ package dev.vasystem.api.v2;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Retrieve route information.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.49.1)",
@@ -91,12 +94,15 @@ public final class RoutesServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Retrieve route information.
+   * </pre>
    */
   public static abstract class RoutesServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * List routes
+     * List routes. This is a paginated endpoint.
      * </pre>
      */
     public void listRoutes(dev.vasystem.api.v2.ListRoutesRequest request,
@@ -118,6 +124,9 @@ public final class RoutesServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Retrieve route information.
+   * </pre>
    */
   public static final class RoutesServiceStub extends io.grpc.stub.AbstractAsyncStub<RoutesServiceStub> {
     private RoutesServiceStub(
@@ -133,7 +142,7 @@ public final class RoutesServiceGrpc {
 
     /**
      * <pre>
-     * List routes
+     * List routes. This is a paginated endpoint.
      * </pre>
      */
     public void listRoutes(dev.vasystem.api.v2.ListRoutesRequest request,
@@ -144,6 +153,9 @@ public final class RoutesServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Retrieve route information.
+   * </pre>
    */
   public static final class RoutesServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<RoutesServiceBlockingStub> {
     private RoutesServiceBlockingStub(
@@ -159,7 +171,7 @@ public final class RoutesServiceGrpc {
 
     /**
      * <pre>
-     * List routes
+     * List routes. This is a paginated endpoint.
      * </pre>
      */
     public dev.vasystem.api.v2.ListRoutesResponse listRoutes(dev.vasystem.api.v2.ListRoutesRequest request) {
@@ -169,6 +181,9 @@ public final class RoutesServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Retrieve route information.
+   * </pre>
    */
   public static final class RoutesServiceFutureStub extends io.grpc.stub.AbstractFutureStub<RoutesServiceFutureStub> {
     private RoutesServiceFutureStub(
@@ -184,7 +199,7 @@ public final class RoutesServiceGrpc {
 
     /**
      * <pre>
-     * List routes
+     * List routes. This is a paginated endpoint.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<dev.vasystem.api.v2.ListRoutesResponse> listRoutes(

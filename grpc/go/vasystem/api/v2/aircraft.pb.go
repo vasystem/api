@@ -20,17 +20,23 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// An AircraftType resource represents a type of aircraft, irrespective of the airline that operates it.
 type AircraftType struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
+	// Unique identifier of the aircraft type.
 	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	// The ICAO aircraft type code.
+	// The ICAO aircraft type code. Unique.
+	// Example: `B738`
 	IcaoCode string `protobuf:"bytes,2,opt,name=icao_code,json=icaoCode,proto3" json:"icao_code,omitempty"`
 	// The IATA aircraft type code.
+	// Example: `738`
 	IataCode string `protobuf:"bytes,3,opt,name=iata_code,json=iataCode,proto3" json:"iata_code,omitempty"`
-	Name     string `protobuf:"bytes,4,opt,name=name,proto3" json:"name,omitempty"`
+	// The name of the aircraft type.
+	// Example: `Boeing 737-800`
+	Name string `protobuf:"bytes,4,opt,name=name,proto3" json:"name,omitempty"`
 }
 
 func (x *AircraftType) Reset() {
@@ -93,15 +99,22 @@ func (x *AircraftType) GetName() string {
 	return ""
 }
 
+// An AircraftModel resource represents a model of aircraft. An aircraft model is an aircraft type linked
+// to an airline and its configuration (usually seating configuration).
 type AircraftModel struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id           string        `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// Unique identifier of the aircraft model.
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	// The type of aircraft.
 	AircraftType *AircraftType `protobuf:"bytes,2,opt,name=aircraft_type,json=aircraftType,proto3" json:"aircraft_type,omitempty"`
-	Airline      *Airline      `protobuf:"bytes,3,opt,name=airline,proto3" json:"airline,omitempty"`
-	Name         string        `protobuf:"bytes,4,opt,name=name,proto3" json:"name,omitempty"`
+	// The airline that operates the aircraft model.
+	Airline *Airline `protobuf:"bytes,3,opt,name=airline,proto3" json:"airline,omitempty"`
+	// The name of the aircraft model.
+	// Example: `	Boeing 737-824(WL)`
+	Name string `protobuf:"bytes,4,opt,name=name,proto3" json:"name,omitempty"`
 }
 
 func (x *AircraftModel) Reset() {

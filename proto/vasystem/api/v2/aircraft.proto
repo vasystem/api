@@ -4,18 +4,31 @@ package vasystem.api.v2;
 
 import "vasystem/api/v2/airlines.proto";
 
+// An AircraftType resource represents a type of aircraft, irrespective of the airline that operates it.
 message AircraftType {
+  // Unique identifier of the aircraft type.
   string id = 1;
-  // The ICAO aircraft type code.
+  // The ICAO aircraft type code. Unique.
+  // Example: `B738`
   string icao_code = 2;
   // The IATA aircraft type code.
+  // Example: `738`
   string iata_code = 3;
+  // The name of the aircraft type.
+  // Example: `Boeing 737-800`
   string name = 4;
 }
 
+// An AircraftModel resource represents a model of aircraft. An aircraft model is an aircraft type linked
+// to an airline and its configuration (usually seating configuration).
 message AircraftModel {
+  // Unique identifier of the aircraft model.
   string id = 1;
+  // The type of aircraft.
   AircraftType aircraft_type = 2;
+  // The airline that operates the aircraft model.
   Airline airline = 3;
+  // The name of the aircraft model.
+  // Example: `	Boeing 737-824(WL)`
   string name = 4;
 }

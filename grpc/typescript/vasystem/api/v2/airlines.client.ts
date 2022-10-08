@@ -12,6 +12,8 @@ import type { ListAirlinesRequest } from "./airlines";
 import type { UnaryCall } from "@protobuf-ts/runtime-rpc";
 import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
 /**
+ * Retrieve airline information.
+ *
  * @generated from protobuf service vasystem.api.v2.AirlinesService
  */
 export interface IAirlinesServiceClient {
@@ -23,6 +25,8 @@ export interface IAirlinesServiceClient {
     listAirlines(input: ListAirlinesRequest, options?: RpcOptions): UnaryCall<ListAirlinesRequest, ListAirlinesResponse>;
 }
 /**
+ * Retrieve airline information.
+ *
  * @generated from protobuf service vasystem.api.v2.AirlinesService
  */
 export class AirlinesServiceClient implements IAirlinesServiceClient, ServiceInfo {

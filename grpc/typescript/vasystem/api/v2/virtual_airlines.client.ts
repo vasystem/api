@@ -18,7 +18,7 @@ import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
  */
 export interface IVirtualAirlinesServiceClient {
     /**
-     * Get virtual airline information
+     * Get virtual airline information.
      * This method does not require authentication.
      *
      * @generated from protobuf rpc: GetVirtualAirline(vasystem.api.v2.GetVirtualAirlineRequest) returns (vasystem.api.v2.GetVirtualAirlineResponse);
@@ -37,7 +37,7 @@ export class VirtualAirlinesServiceClient implements IVirtualAirlinesServiceClie
     constructor(private readonly _transport: RpcTransport) {
     }
     /**
-     * Get virtual airline information
+     * Get virtual airline information.
      * This method does not require authentication.
      *
      * @generated from protobuf rpc: GetVirtualAirline(vasystem.api.v2.GetVirtualAirlineRequest) returns (vasystem.api.v2.GetVirtualAirlineResponse);

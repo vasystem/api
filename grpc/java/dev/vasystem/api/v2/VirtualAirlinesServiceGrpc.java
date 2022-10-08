@@ -102,7 +102,7 @@ public final class VirtualAirlinesServiceGrpc {
 
     /**
      * <pre>
-     * Get virtual airline information
+     * Get virtual airline information.
      * This method does not require authentication.
      * </pre>
      */
@@ -143,7 +143,7 @@ public final class VirtualAirlinesServiceGrpc {
 
     /**
      * <pre>
-     * Get virtual airline information
+     * Get virtual airline information.
      * This method does not require authentication.
      * </pre>
      */
@@ -173,7 +173,7 @@ public final class VirtualAirlinesServiceGrpc {
 
     /**
      * <pre>
-     * Get virtual airline information
+     * Get virtual airline information.
      * This method does not require authentication.
      * </pre>
      */
@@ -202,7 +202,7 @@ public final class VirtualAirlinesServiceGrpc {
 
     /**
      * <pre>
-     * Get virtual airline information
+     * Get virtual airline information.
      * This method does not require authentication.
      * </pre>
      */

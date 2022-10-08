@@ -38,7 +38,7 @@ class VirtualAirlinesService final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    // Get virtual airline information
+    // Get virtual airline information.
     // This method does not require authentication.
     virtual ::grpc::Status GetVirtualAirline(::grpc::ClientContext* context, const ::vasystem::api::v2::GetVirtualAirlineRequest& request, ::vasystem::api::v2::GetVirtualAirlineResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::vasystem::api::v2::GetVirtualAirlineResponse>> AsyncGetVirtualAirline(::grpc::ClientContext* context, const ::vasystem::api::v2::GetVirtualAirlineRequest& request, ::grpc::CompletionQueue* cq) {
@@ -50,7 +50,7 @@ class VirtualAirlinesService final {
     class async_interface {
      public:
       virtual ~async_interface() {}
-      // Get virtual airline information
+      // Get virtual airline information.
       // This method does not require authentication.
       virtual void GetVirtualAirline(::grpc::ClientContext* context, const ::vasystem::api::v2::GetVirtualAirlineRequest* request, ::vasystem::api::v2::GetVirtualAirlineResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetVirtualAirline(::grpc::ClientContext* context, const ::vasystem::api::v2::GetVirtualAirlineRequest* request, ::vasystem::api::v2::GetVirtualAirlineResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
@@ -98,7 +98,7 @@ class VirtualAirlinesService final {
    public:
     Service();
     virtual ~Service();
-    // Get virtual airline information
+    // Get virtual airline information.
     // This method does not require authentication.
     virtual ::grpc::Status GetVirtualAirline(::grpc::ServerContext* context, const ::vasystem::api::v2::GetVirtualAirlineRequest* request, ::vasystem::api::v2::GetVirtualAirlineResponse* response);
   };

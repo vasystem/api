@@ -969,7 +969,7 @@
           "methods": [
             {
               "name": "GetVirtualAirline",
-              "description": "Get virtual airline information\nThis method does not require authentication.",
+              "description": "Get virtual airline information.\nThis method does not require authentication.",
               "requestType": "GetVirtualAirlineRequest",
               "requestLongType": "GetVirtualAirlineRequest",
               "requestFullType": "vasystem.api.v2.GetVirtualAirlineRequest",

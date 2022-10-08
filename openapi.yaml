@@ -26,6 +26,9 @@ paths:
                         application/json:
                             schema:
                                 $ref: '#/components/schemas/Status'
+            security:
+                - oauth2:
+                    - airlines
     /v2/routes:
         get:
             tags:
@@ -83,13 +86,16 @@ paths:
                         application/json:
                             schema:
                                 $ref: '#/components/schemas/Status'
+            security:
+                - oauth2:
+                    - routes
     /v2/virtual-airline:
         get:
             tags:
                 - VirtualAirlinesService
             summary: Get virtual airline information
             description: |-
-                Get virtual airline information
+                Get virtual airline information.
                  This method does not require authentication.
             operationId: VirtualAirlinesService_GetVirtualAirline
             responses:
@@ -309,6 +315,16 @@ components:
                     type: string
                     description: 'The main website URL of the virtual airline. Example: `https://staralliancevirtual.org`'
             description: A VirtualAirline resource represents a virtual airline. All methods in the API operate on a single virtual airline.
+    securitySchemes:
+        oauth2:
+            type: oauth2
+            description: This API can only be accessed using the OAuth2 client credentials flow.
+            flows:
+                clientCredentials:
+                    tokenUrl: /oauth2/token
+                    scopes:
+                        airlines: Access to the airlines API
+                        routes: Access to the routes API
 tags:
     - name: AirlinesService
       description: Retrieve airline information.

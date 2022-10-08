@@ -72,7 +72,7 @@ namespace Vasystem.Api.V2 {
     public abstract partial class VirtualAirlinesServiceBase
     {
       /// <summary>
-      /// Get virtual airline information
+      /// Get virtual airline information.
       /// This method does not require authentication.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -114,7 +114,7 @@ namespace Vasystem.Api.V2 {
       }
 
       /// <summary>
-      /// Get virtual airline information
+      /// Get virtual airline information.
       /// This method does not require authentication.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -128,7 +128,7 @@ namespace Vasystem.Api.V2 {
         return GetVirtualAirline(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get virtual airline information
+      /// Get virtual airline information.
       /// This method does not require authentication.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -140,7 +140,7 @@ namespace Vasystem.Api.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetVirtualAirline, null, options, request);
       }
       /// <summary>
-      /// Get virtual airline information
+      /// Get virtual airline information.
       /// This method does not require authentication.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -154,7 +154,7 @@ namespace Vasystem.Api.V2 {
         return GetVirtualAirlineAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get virtual airline information
+      /// Get virtual airline information.
       /// This method does not require authentication.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>

@@ -27,7 +27,7 @@ class VirtualAirlinesServiceServicer(object):
     """
 
     def GetVirtualAirline(self, request, context):
-        """Get virtual airline information
+        """Get virtual airline information.
         This method does not require authentication.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)

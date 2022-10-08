@@ -22,7 +22,7 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type VirtualAirlinesServiceClient interface {
-	// Get virtual airline information
+	// Get virtual airline information.
 	// This method does not require authentication.
 	GetVirtualAirline(ctx context.Context, in *GetVirtualAirlineRequest, opts ...grpc.CallOption) (*GetVirtualAirlineResponse, error)
 }
@@ -48,7 +48,7 @@ func (c *virtualAirlinesServiceClient) GetVirtualAirline(ctx context.Context, in
 // All implementations must embed UnimplementedVirtualAirlinesServiceServer
 // for forward compatibility
 type VirtualAirlinesServiceServer interface {
-	// Get virtual airline information
+	// Get virtual airline information.
 	// This method does not require authentication.
 	GetVirtualAirline(context.Context, *GetVirtualAirlineRequest) (*GetVirtualAirlineResponse, error)
 	mustEmbedUnimplementedVirtualAirlinesServiceServer()

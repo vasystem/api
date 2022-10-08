@@ -17,7 +17,7 @@ module Vasystem
           self.unmarshal_class_method = :decode
           self.service_name = 'vasystem.api.v2.VirtualAirlinesService'
 
-          # Get virtual airline information
+          # Get virtual airline information.
           # This method does not require authentication.
           rpc :GetVirtualAirline, ::Vasystem::Api::V2::GetVirtualAirlineRequest, ::Vasystem::Api::V2::GetVirtualAirlineResponse
         end

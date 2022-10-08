@@ -4,7 +4,7 @@ package vasystem.api.v2;
 
 // Retrieve virtual airline information.
 service VirtualAirlinesService {
-  // Get virtual airline information
+  // Get virtual airline information.
   // This method does not require authentication.
   rpc GetVirtualAirline(GetVirtualAirlineRequest) returns (GetVirtualAirlineResponse) {}
 }

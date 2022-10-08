@@ -1,0 +1,5 @@
+api.protoset linguist-generated
+
+grpc/**/* linguist-generated
+grpc/rust/**/* -linguist-generated
+grpc/rust/api.protoset linguist-generated
